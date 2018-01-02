@@ -1,6 +1,6 @@
-# StaticRoot
+#Jekyll PWA Starter
 
-Initial version of a Jekyll site for Workopolis static pages.
+A Jekyll starter site with simple Service Worker and web manifest wired up. 
 
 ## Application Requirements
 
@@ -13,6 +13,7 @@ Initial version of a Jekyll site for Workopolis static pages.
 ## Running Jekyll Manually
 
 1. Clone this repo
+2. Open a Terminal/CMD window in the destination folder and run `bundle install`
 2. Open a Terminal/CMD window in the destination folder and run `npm install`
 3. Type `gulp` to build the Jekyll site
 
