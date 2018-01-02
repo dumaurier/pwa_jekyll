@@ -1,0 +1,22 @@
+<footer class="global-footer" role="contentinfo">
+
+</footer>
+
+{% if page.pagejs %}
+ <script  src="{{ site.baseurl }}/static-assets/js/{{ page.pagejs }}"></script>
+{% endif %}
+
+
+<script>
+// Ye Olde Service Worker----------------------------------------------
+(function() {
+ 'use strict';
+  if ('serviceWorker' in navigator) {
+   navigator.serviceWorker
+   .register('/sw.js',{
+    scope: '/'
+   })
+   .then(function() { console.log('Service Worker Registered');  });
+  }
+ })();
+</script>

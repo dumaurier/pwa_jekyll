@@ -1,0 +1,29 @@
+---
+title: Jekyll PWA Starter
+timezone: UTC
+destination: _site/
+domainname: no name
+baseurl:
+assetsurl: /static-assets/
+markdown: kramdown
+highlighter: rouge
+exclude:
+- config
+- screenshots
+- node_modules
+- gulpfile.js
+- package.json
+- src
+- README.md
+- Gemfile
+- Gemfile.lock
+- Dockerfile
+- docker-entrypoint.sh
+port: 4000
+gems:
+- jekyll-language-plugin
+sass:
+  style: :compressed
+
+language_data: data.i18n.lang.%%
+language_includes_dir: _i18n

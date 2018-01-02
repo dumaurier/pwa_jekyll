@@ -1,0 +1,6 @@
+{
+  "name": " worko",
+  "tagline": "Jekyll - Starter",
+  "body": "# Worko Static\r\n\r\nInitial version of a Jekyll site for Worko\r\n\r\n## Requirements:\r\n\r\n1. Ruby\r\n2. Jekyll\r\n3. Node.js\r\n4. Gulp\r\n\r\n## Running Jekyll\r\n\r\n1. Clone this repo\r\n2. Open a Terminal/CMD window in the destination folder and run `npm install`\r\n3. Type `gulp` to build the Jekyll site\r\n\r\n## Using Jekyll-Admin Extension\r\n\r\nInfo on the jekyll-admin extension is available here: https://github.com/jekyll/jekyll-admin\r\n\r\n1. Open a Terminal/CMD window and run `bundle install`. This will install the jeykll-admin extension\r\n2. To run an instance of Jekyll with the Admin interface run `gulp jekyll-build`\r\n3. To run browser-sync with or without the Admin interface run `gulp` in a separate Terminal/CMD window\r\n\r\n\r\n\r\n\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

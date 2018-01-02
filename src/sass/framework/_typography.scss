@@ -1,0 +1,64 @@
+
+//Base styles for headers, paragraphs, and inline quotations.
+
+h1 {
+    @include font-size(3);
+}
+
+h2 {
+    @include font-size(2);
+}
+
+h3 {
+    @include font-size(1.75);
+}
+
+h4 {
+    @include font-size(1.375);
+}
+
+h5 {
+    @include font-size(1.15);
+}
+
+h6 {
+    @include font-size(1);
+}
+
+p {
+    @include font-size(1);
+    text-align: left;
+    margin: 0;
+
+    + p{
+     margin-top: 1rem;
+    }
+}
+
+q{
+  font-style:italic;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+
+  &:before { content: open-quote; }
+  &:after { content: close-quote; }
+}
+
+q:lang(fr){
+  font-style:italic;
+  quotes: "\00AB" "\00BB" "\201C" "\201D";
+
+  &:before { content: open-quote; }
+  &:after { content: close-quote; }
+}
+
+//Text-level semantic styles
+ code, pre {
+    font-family: "Courier New", Courier, Monospace;
+    @include font-size(.875);
+}
+
+ dfn,
+ abbr{
+    border-bottom:1px dotted $grey;
+    cursor:help;
+}

@@ -1,0 +1,11 @@
+.home{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.block{
+  background: $color-yellow-pale;
+  padding: 1.25rem;
+  width: 100%;
+}

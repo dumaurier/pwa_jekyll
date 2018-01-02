@@ -1,0 +1,14 @@
+button,
+.primary-cta{
+  margin-top: 1rem;
+  border: 1px solid $color-black;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  background: $grey-ghost;
+  @include font-size(1);
+
+  &[disabled]{
+    background: $color-yellow-pale;
+    color: $color-black;
+  }
+}

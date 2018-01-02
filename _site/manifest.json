@@ -1,0 +1,19 @@
+{
+  "name": "My Jekyll Site",
+  "short_name": "My Jekyll Site",
+  "description": "Jekyll PWA",
+  "icons": [{
+      "src": "/static-assets/images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+  },
+  {
+      "src": "/static-assets/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+  }],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#377D39",
+  "theme_color": "#850057"
+}

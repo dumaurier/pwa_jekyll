@@ -1,0 +1,17 @@
+@import "framework/_variables";
+@import "framework/_mixins";
+
+// Base Style Sheet
+@import "framework/_globals";
+
+//Core and new elements
+@import "framework/_typography";
+@import "framework/_forms";
+@import "framework/_polyfills";
+@import "framework/_buttons";
+@import "framework/_tables";
+
+
+
+//Components
+@import "components/footer/new-footer";

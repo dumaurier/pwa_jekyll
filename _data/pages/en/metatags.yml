@@ -1,0 +1,6 @@
+home:
+  section: None
+  subsection: Home page
+  pagetype: Home page
+  robots: follow,index
+  description: Site description

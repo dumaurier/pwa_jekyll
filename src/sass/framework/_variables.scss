@@ -1,0 +1,51 @@
+////////////////////////////////////////
+////////////  Breakpoints ///////////////
+////////////////////////////////////////
+$max-width: 1240px;
+$mq-small: 768px;
+$mq-medium: 960px;
+$mq-tabby: 1024px;
+$mq-large: $max-width;
+
+//////////////////////////////////////
+// The Breakpoints below should only
+// be used in special circumstances
+//////////////////////////////////////
+$mq-xsmall: 320px;
+$mq-small-height: 480px;
+$mq-small-landscape: 375px;
+
+//////////////////////////////////////
+//Offical New Colours - Late 2016 ////
+//////////////////////////////////////
+$color-green: #377D39;
+$color-green-dark: #2b462c;
+$color-blue: #0073BD;
+$color-purple: #850057;
+$color-pink: #d10074;
+$color-red: #B20101;
+$color-orange: #cf4829;
+$color-green-neon: #69be28;
+$color-white: #ffffff;
+$color-black: #141619;
+$color-yellow-pale: #fdf9d8;
+
+//Blacks & Greys
+$grey-dark: #25282e;
+$grey: #525967;
+$grey-light: #caced4;
+$grey-steel: #e5e8ea;
+$grey-ghost: #f2f4f5;
+
+//Brands and such
+$color-social-fb: #3b5998;
+
+
+/////////////////////////////
+/// SPACINGS AND DEFAULTS ///
+////////////////////////////
+
+// Spacing and widths
+$space-default: 10px;
+$padding-section: 20px;
+$nav-height: 70px;

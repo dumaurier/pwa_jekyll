@@ -1,0 +1,83 @@
+// the submit and cancel button follow the button style
+
+fieldset {
+  border: 1px solid $grey-steel;
+  padding: 15px 15px 30px;
+  margin:0;
+
+  legend {
+    @include font-size(1.5);
+  }
+}
+
+label {
+  @include font-size(0.875);
+  color: $grey-dark;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+fieldset label:not(:first-of-type){
+  padding-top: 15px;
+}
+
+input,
+textarea,
+select {
+  @include font-size(1);
+}
+
+input,
+textarea,
+select {
+  // border-radius: 3px;
+  border: 2px solid $grey-light;
+  padding: 6px;
+  transition: border-color 0.3s, text-color 0.3s;
+  width: 100%;
+
+  &:focus {
+    border-color: $color-blue;
+  }
+}
+
+input:required:invalid {
+  border: 2px solid #b20101;
+}
+
+input:required:valid {
+  border: 2px solid $color-green;
+}
+
+input:required:invalid,
+input:required:valid{
+  -moz-box-shadow: none;
+  &:focus {
+    border-color: 1px solid $grey-light;
+  }
+}
+
+select {
+  line-height: 1.55rem;
+  overflow-y: scroll;
+  min-height: 30px;
+}
+
+option {
+  padding: 5px;
+  color: $grey;
+}
+
+@media screen and ( min-width: $mq-medium ){
+  input,
+  textarea,
+  select {
+
+    @include font-size(0.875);
+    &:hover,
+    &:focus {
+      @include font-size(0.875);
+    }
+  }
+}

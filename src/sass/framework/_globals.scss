@@ -1,0 +1,84 @@
+
+* {
+    box-sizing: border-box;
+    color: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+html {
+    background-color: $color-white;
+    color: $color-black;
+    font-family: $font-fast;
+    font-size: 100%;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+    display: block;
+    max-width: 100%;
+    width: 100%; //Why are both max-width and width set to 100%?
+    height: auto;
+    position: static;
+    &:focus {
+      outline: none;
+    }
+}
+
+footer{
+  display: none;
+}
+
+.container{
+    display: block;
+    width: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+
+.block{
+   max-width: 1240px;
+   margin: 0 auto;
+}
+
+a {
+    color: $color-blue;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:focus, &:hover {
+        text-decoration: underline;
+    }
+}
+
+.disabled-link{
+	cursor: not-allowed;
+	color: $grey-ghost;
+}
+
+
+// a11y: Hide element visually but keep it available to screenreaders
+.visuallyhidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+[href="#main"] {
+  position: absolute;
+  top: 0;
+  right: 110%;
+
+  &:focus {
+    right: auto;
+  }
+}

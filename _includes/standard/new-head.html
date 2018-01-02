@@ -1,0 +1,72 @@
+<head lang="en">
+  <script>
+    // https://github.com/filamentgroup/loadCSS
+    !function(e){"use strict"
+    var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
+    return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
+    setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
+    "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
+  </script>
+  <!-- Static Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="copyright" content="&copy 2018 " />
+  <meta name="description" content="Site description" />
+  <meta name="robots" content="index, follow"  />
+  <link rel="canonical" href="{{ site.baseurl }}" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#fffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/static-assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/static-assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/static-assets/images/favicon-16x16.png">
+  <link rel="mask-icon" href="{{ site.baseurl }}/static-assets/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+
+  <!-- Meta tags for social media -->
+  <meta property="og:locale" content="en" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{page.title}}"  />
+  <meta property="og:url" content="{{ site.domainname }}{{ site.baseurl }}{{ page.url }}"  />
+  <meta property="og:site_name" content="{{ site.title }}"  />
+  <meta property="og:image" content="putanimagehere.png" />
+  <meta property="og:description" content="Site description"  />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:title" content="{{ page.title }}" />
+  <meta property="twitter:image" content="{{ site.domainname }}{{ site.baseurl }}{{ site.assetsurl }}images/workopolis-social-logo.jpg" />
+  <meta property="twitter:site" content="@jshvgt"  />
+  <meta property="twitter:creator" content="@jshvgt"  />
+  <meta property="twitter:description" content="site description"  />
+
+  {% capture styles %}
+    {% include critical/new-critical.css %}
+  {% endcapture %}
+
+  {% if page.pagestyle %}
+   {% capture critical %}
+    {% include critical/{{ page.pagestyle }} %}
+   {% endcapture %}
+  {% endif %}
+
+  <style>
+  {{ styles | scssify }}{{ critical }}
+  </style>
+
+
+  {% if jekyll.environment != "production" %}
+  <script>
+  loadCSS('{{ site.baseurl }}/static-assets/css/new-base.css');
+  </script>
+  {% endif %}
+
+ {% if jekyll.environment == "production" %}
+ <script>
+ loadCSS('{{ site.baseurl }}/static-assets/dist/new-base-820ec1693e.css');
+ </script>
+ {% endif %}
+
+  <script async defer="defer" src="{{ site.baseurl }}/static-assets/js/modernizr_grid.js"></script>
+
+</head>
