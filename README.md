@@ -1,4 +1,4 @@
-#Jekyll PWA Starter
+# Jekyll PWA Starter
 
 A Jekyll starter site with simple Service Worker and web manifest wired up. 
 
