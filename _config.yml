@@ -20,7 +20,7 @@ exclude:
 - Dockerfile
 - docker-entrypoint.sh
 port: 4000
-gems:
+plugins:
 - jekyll-language-plugin
 sass:
   style: :compressed
