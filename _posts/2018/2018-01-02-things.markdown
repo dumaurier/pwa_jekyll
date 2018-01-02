@@ -1,0 +1,15 @@
+---
+layout: "post"
+title: "things"
+date: "2018-01-02 14:01"
+permalink: /blog/:year/:title/
+published: true
+categories: ""
+tags: []
+short-desc: ""
+---
+
+# This is a test page
+
+Hello this is some content
+ 

@@ -1,1 +1,1 @@
-.home{display:grid;grid-template-columns:repeat(4, 1fr);grid-gap:2rem}.block{background:#fdf9d8;padding:1.25rem;width:100%}
+.home{padding:2rem}.block{background:#ffffff;padding:1.25rem;width:100%}.global-footer{display:block}

@@ -1,0 +1,9 @@
+.header-container{
+ width: 100vw;
+ border-bottom: 1px solid $grey;
+
+ h1{
+  @include font-size(1);
+  margin: 0;
+ }
+}

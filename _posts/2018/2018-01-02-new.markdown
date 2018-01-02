@@ -1,0 +1,10 @@
+---
+layout: "post"
+title: "new"
+date: "2018-01-02 13:57"
+permalink: /blog/:year/:title/
+published: true
+categories: ""
+tags: []
+short-desc: ""
+---

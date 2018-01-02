@@ -1,11 +1,13 @@
 .home{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  padding: 2rem;
 }
 
 .block{
-  background: $color-yellow-pale;
+  background: #ffffff;
   padding: 1.25rem;
   width: 100%;
+}
+
+.global-footer{
+ display: block;
 }

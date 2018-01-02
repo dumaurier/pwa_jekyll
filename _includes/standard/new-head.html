@@ -44,6 +44,12 @@
     {% include critical/new-critical.css %}
   {% endcapture %}
 
+  {% if page.layout == "posts" %}
+  {% capture postsStyle %}
+    {% include critical/posts.css %}
+  {% endcapture %}
+  {% endif %}
+
   {% if page.pagestyle %}
    {% capture critical %}
     {% include critical/{{ page.pagestyle }} %}
@@ -51,8 +57,12 @@
   {% endif %}
 
   <style>
-  {{ styles | scssify }}{{ critical }}
+  {{ styles | scssify }}{{ critical }}{{ postsStyle}}
   </style>
+
+
+
+
 
 
   {% if jekyll.environment != "production" %}
