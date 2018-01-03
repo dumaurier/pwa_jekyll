@@ -3,6 +3,7 @@ const browserSync = require('browser-sync');
 const sass        = require('gulp-sass');
 const prefix      = require('gulp-autoprefixer');
 const cp          = require('child_process');
+const run          = require('gulp-run');
 const concat      = require('gulp-concat');
 const uglify      = require('gulp-uglify');
 const htmlmin     = require('gulp-htmlmin');
@@ -18,8 +19,16 @@ const messages = {
  */
 gulp.task('jekyll-build', function (done) {
     //browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['serve -s hire'], {stdio: 'inherit'})
-        .on('close', done)
+   var shellCommand = 'bundle exec jekyll build';
+   return gulp.src('')
+        .pipe(run(shellCommand));
+});
+
+gulp.task('jekyll-watch', function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    var shellCommand = 'bundle exec jekyll build';
+    return gulp.src('')
+         .pipe(run(shellCommand));
 });
 
 gulp.task('jekyll-docker', function (done) {
@@ -28,11 +37,7 @@ gulp.task('jekyll-docker', function (done) {
         .on('close', done)
 });
 
-gulp.task('jekyll-watch', function (done) {
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
-        .on('close', done)
-});
+
 
 
 /**

@@ -1,6 +1,6 @@
 {
-  "name": "worko-static",
-  "version": "0.0.2",
+  "name": "pwa-jekyll",
+  "version": "0.0.1",
   "description": "bare bones starter for workopolis",
   "main": "gulpfile.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "devDependencies": {
     "browser-sync": "^1.3.7",
     "gulp": "^3.9.1",
+    "gulp-run": "1.7.1",
     "gulp-autoprefixer": "1.0.0",
     "gulp-concat": "2.6.0",
     "gulp-htmlmin": "^3.0.0",
