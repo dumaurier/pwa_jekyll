@@ -45,6 +45,6 @@ defaults:
       layout: posts
       short-desc: short desciption of your post.
 
-
+languages: ['en', 'fr']
 language_data: data.i18n.lang.%%
 language_includes_dir: _i18n
