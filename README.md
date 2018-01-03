@@ -4,7 +4,7 @@ A simple Jekyll starter with PWA functionality baked in. This includes a manifes
 
 ## What's Inside?
 ### Critical CSS
-This Jekyll starter uses Filement Group's `LoadCSS` to load the base CSS file after the inlined CSS has been parsed. The critical CSS is injected into the generated pages on build. Pages will each have their own critical CSS files and posts have their own as well. These are inlined along with the core CSS file that containes basic default styles. The critical CSS can found in `_includes/standard/new-head.html`.
+This Jekyll starter uses Filement Group's [LoadCSS](https://github.com/filamentgroup/loadCSS) to load the base CSS file after the inlined CSS has been parsed. The critical CSS is injected into the generated pages on build. Pages will each have their own critical CSS files and posts have their own as well. These are inlined along with the core CSS file that containes basic default styles. The critical CSS can found in `_includes/standard/new-head.html`.
 
 ```
   {% capture styles %}
@@ -54,7 +54,7 @@ To force the browser to update the Service Worker when the site has changed the 
 Running the site using the default `gulp` task will use BrowserSync. It's a fair bit slower on Windows when compared to a Mac.
 
 ### Jekyll Admin
-The Jekyll Admin gem is included. The Jekyll admin GUI can be accessed from `localhost:3000/admin' when using `gulp` and 'localhost:4000/admin` when building the site using `jekyll serve`.
+The [Jekyll Admin](https://github.com/jekyll/jekyll-admin) gem is included. The Jekyll admin GUI can be accessed from `localhost:3000/admin' when using `gulp` and 'localhost:4000/admin` when building the site using `jekyll serve`.
 
 Default front matter for pages and posts can be configured in the `_config.yml` file. This will be visible in the admin UI when creating/editing pages or posts.
 
@@ -82,6 +82,28 @@ defaults:
       short-desc: short desciption of your post.
 ```
 The site will need to be rebuilt if changes to the `_config.yml` are made before they will be available in the Admin UI.
+
+### Internationalization Plugin
+The [Jekyll Language Plugin](https://github.com/vwochnik/jekyll-language-plugin) is available but not configured on any of the existing pages. To add multi-lingual support add the desired language to the `_config.yml` file:
+
+```
+languages: ['en', 'fr']
+language_data: data.i18n.lang.%%
+language_includes_dir: _i18n
+```
+
+In the front matter of your page or post add the languages the page should support:
+
+```
+languages:
+- en
+- fr
+subset: home
+```
+
+Translations should be added to the `lang.yml` file located at `_data/i18n/`. More information on the `jekyll-language-plugin` is availble on the repo's [Wiki](https://github.com/vwochnik/jekyll-language-plugin/wiki).
+
+
 
 ## Application Requirements
 
