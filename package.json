@@ -1,7 +1,7 @@
 {
   "name": "pwa-jekyll",
   "version": "0.0.1",
-  "description": "bare bones starter for workopolis",
+  "description": "jekyll boilerplate with PWA functionality",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
