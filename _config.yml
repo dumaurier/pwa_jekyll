@@ -25,5 +25,26 @@ plugins_dir:
 sass:
   style: :compressed
 
+# front matter defaults for pages and posts. These fields are also available for editing in the Jekyll Admin GUI. This is available at localhost:4000/admin
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      all: true
+  - scope:
+      path: ''
+      type: pages
+    values:
+      page_only: true
+      layout: standard
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: posts
+      short-desc: short desciption of your post.
+
+
 language_data: data.i18n.lang.%%
 language_includes_dir: _i18n
