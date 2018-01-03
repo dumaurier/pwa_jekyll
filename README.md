@@ -83,6 +83,9 @@ defaults:
 ```
 The site will need to be rebuilt if changes to the `_config.yml` are made before they will be available in the Admin UI.
 
+### Internationalization Plugin
+The (Jekyll Language Plugin)[https://github.com/vwochnik/jekyll-language-plugin] is available but not configured on any of the existing pages.
+
 ## Application Requirements
 
 1. Ruby
