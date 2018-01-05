@@ -1,12 +1,12 @@
 {
   "name": "pwa-jekyll",
   "version": "0.0.1",
-  "description": "bare bones starter for workopolis",
+  "description": "jekyll boilerplate with PWA functionality",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Workopolis",
+  "author": "Josh Vogt",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^1.3.7",
@@ -28,7 +28,7 @@
     "sass",
     "browsersync"
   ],
-  "homepage": "http://workopolis.com",
+  "homepage": "http://joshvogt.co",
   "dependencies": {
     "bourbon-neat": "^1.8.0",
     "gulp": "^3.9.1",
@@ -38,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dumaurier/_worko.git"
+    "url": "git+https://github.com/dumaurier/pwa_jekyll.git"
   },
   "bugs": {
-    "url": "https://github.com/dumaurier/_worko/issues"
+    "url": "https://github.com/dumaurier/pwa_jekyll/issues"
   }
 }
