@@ -37,9 +37,6 @@ gulp.task('jekyll-docker', function (done) {
         .on('close', done)
 });
 
-
-
-
 /**
  * Rebuild Jekyll & do page reload
  */

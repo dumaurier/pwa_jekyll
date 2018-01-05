@@ -16,7 +16,7 @@
   if ('serviceWorker' in navigator) {
    navigator.serviceWorker
    .register('/sw.js',{
-    scope: '/'
+    scope: '/pwa-jekyll/'
    })
    .then(function() { console.log('Service Worker Registered');  });
   }

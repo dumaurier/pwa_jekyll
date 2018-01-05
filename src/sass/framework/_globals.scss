@@ -6,22 +6,23 @@
     line-height: inherit;
 }
 
-html {
-    background-color: $color-white;
-    color: $color-black;
-    font-family: $font-fast;
-    font-size: 100%;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+html,
+body{
+ margin: 0;
+ padding: 0;
+ height: 100%;
+ width: 100%;
+ font-family: $font-fast;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+body{
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: space-between;
 }
 
 main {
+   flex-grow: 1;
     display: block;
     max-width: 100%;
     width: 100%; //Why are both max-width and width set to 100%?
@@ -81,4 +82,9 @@ a {
   &:focus {
     right: auto;
   }
+}
+
+.global-footer{
+ height: 100px;
+ border-top: .2rem solid $grey-dark;
 }

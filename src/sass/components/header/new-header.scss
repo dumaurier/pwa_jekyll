@@ -1,9 +1,12 @@
 .header-container{
  width: 100vw;
- border-bottom: 1px solid $grey;
+ border-bottom: .15rem solid $grey;
+ height: 3.5rem;
+ display: flex;
+ align-items: center;
 
  h1{
   @include font-size(1);
-  margin: 0;
+  margin: 0 0 0 20px;
  }
 }

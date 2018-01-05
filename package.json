@@ -32,6 +32,7 @@
   "dependencies": {
     "bourbon-neat": "^1.8.0",
     "gulp": "^3.9.1",
+    "node-sass": "^4.7.2",
     "workbox-google-analytics": "^1.0.0",
     "workbox-sw": "^1.0.0"
   },
