@@ -53,6 +53,9 @@ a {
     color: $color-blue;
     cursor: pointer;
     text-decoration: underline;
+    text-decoration-skip: ink;
+    font-weight: 500;
+    text-decoration-color: $color-orange;
 
     &:focus, &:hover {
         text-decoration: underline;

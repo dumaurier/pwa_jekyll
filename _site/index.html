@@ -50,9 +50,9 @@
   
 
   <style>
-  *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline}a:focus,a:hover{text-decoration:underline}.disabled-link{cursor:not-allowed;color:#f2f4f5}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}.header-container{width:100vw;border-bottom:0.15rem solid #525967;height:3.5rem;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.header-container h1{font-size:16px;font-size:1rem;margin:0 0 0 20px}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f2f4f5;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}
+  *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;text-decoration-color:#cf4829}a:focus,a:hover{text-decoration:underline}.disabled-link{cursor:not-allowed;color:#f2f4f5}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}.header-container{width:100vw;border-bottom:0.15rem solid #525967;height:3.5rem;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.header-container h1{font-size:16px;font-size:1rem;margin:0 0 0 20px}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f2f4f5;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}
 
-    .home{padding:2rem}.block{background:#ffffff;padding:1.25rem;width:100%}.global-footer{display:block}
+    .home{padding:2rem}.block{background:#ffffff;padding:1.25rem;width:100%}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:1.3rem}
 
    
   </style>
@@ -88,11 +88,19 @@
  <section class="block">
   <h1>Jekyll PWA Starter</h1>
   <p>
-   A simple Jekyll/PWA starter project. <a href=""
+   A simple Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll PWA Stater on GitHub.</a>
   </p>
  </section>
   <section class="block">
-   <ul>
+   <ul class="posts-list">
+       
+       <li>
+         <a href="/2018/01/06/Saturday.html">It is Saturday. And it is Cold. - January 06, 2018</a>
+         <p>
+           It's too damn cold.
+         </p>
+       </li>
+
        
        <li>
          <a href="/2018/01/03/this-is-a-test.html">This is a test - January 03, 2018</a>
@@ -113,8 +121,6 @@
    </ul>
   </section>
 </main>
-
-<a href="https://github.com/dumaurier/pwa_jekyll"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 
 
     <footer class="global-footer" role="contentinfo">

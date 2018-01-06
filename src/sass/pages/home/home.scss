@@ -11,3 +11,11 @@
 .global-footer{
  display: block;
 }
+
+.posts-list a{
+  @include font-size(1.125);
+}
+
+li + li{
+  margin-top: 1.3rem;
+}
