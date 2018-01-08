@@ -1,5 +1,5 @@
-var cacheName = 'proto1.1';
-var dataCacheName = 'proto1.1';
+var cacheName = 'proto1.2';
+var dataCacheName = 'proto1.2';
 
 var getPageURL = location;
 
@@ -7,8 +7,8 @@ var filesToCache = [
  '/manifest.json',
  '/static-assets/js/home.js',
  '/static-assets/css/new-base.css',
- '/static-assets/js/modernizr_grid.js',
  '/index.html',
+ '/',
  '404.html'
 ];
 
