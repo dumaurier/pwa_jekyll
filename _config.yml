@@ -3,7 +3,8 @@ title: Jekyll PWA Starter
 timezone: UTC
 destination: _site/
 domainname: no name
-baseurl:
+baseurl: /
+sitename: My Website
 assetsurl: /static-assets/
 markdown: kramdown
 highlighter: rouge

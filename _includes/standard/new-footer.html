@@ -1,11 +1,21 @@
 <footer class="global-footer" role="contentinfo">
+
+ <ul class="indieweb-social">
+  {% for social in site.data.me.social %}
+    <li>
+      <a href="{{social.url}}" rel="me">
+        {{ social.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
  <p>
   &copy; 2018
  </p>
 </footer>
 
 {% if page.pagejs %}
- <script  src="{{ site.baseurl }}/static-assets/js/{{ page.pagejs }}"></script>
+ <script  src="static-assets/js/{{ page.pagejs }}"></script>
 {% endif %}
 
 <script>
