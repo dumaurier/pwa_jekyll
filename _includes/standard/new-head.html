@@ -60,11 +60,6 @@
   {{ styles | scssify }}{{ critical }}{{ postsStyle}}
   </style>
 
-
-
-
-
-
   {% if jekyll.environment != "production" %}
   <script>
   loadCSS('{{ site.baseurl }}/static-assets/css/new-base.css');
@@ -76,7 +71,5 @@
  loadCSS('{{ site.baseurl }}/static-assets/dist/new-base-820ec1693e.css');
  </script>
  {% endif %}
-
-  <script async defer="defer" src="{{ site.baseurl }}/static-assets/js/modernizr_grid.js"></script>
 
 </head>
