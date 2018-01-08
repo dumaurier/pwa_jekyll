@@ -8,7 +8,6 @@
  <script  src="{{ site.baseurl }}/static-assets/js/{{ page.pagejs }}"></script>
 {% endif %}
 
-
 <script>
 // Ye Olde Service Worker----------------------------------------------
 (function() {
@@ -16,7 +15,7 @@
   if ('serviceWorker' in navigator) {
    navigator.serviceWorker
    .register('/sw.js',{
-    scope: '/pwa-jekyll/'
+    scope: '/'
    })
    .then(function() { console.log('Service Worker Registered');  });
   }

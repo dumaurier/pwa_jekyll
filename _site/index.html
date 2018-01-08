@@ -21,8 +21,8 @@
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0073bd">
   <link rel="apple-touch-icon" sizes="180x180" href="/static-assets/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/static-assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static-assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static-assets/images/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static-assets/images/icon-16x16.png">
   <link rel="mask-icon" href="/static-assets/images/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="icon" href="/favicon.ico">
   <title>Page</title>
@@ -133,7 +133,6 @@
  <script  src="/static-assets/js/home.js"></script>
 
 
-
 <script>
 // Ye Olde Service Worker----------------------------------------------
 (function() {
@@ -141,7 +140,7 @@
   if ('serviceWorker' in navigator) {
    navigator.serviceWorker
    .register('/sw.js',{
-    scope: '/pwa-jekyll/'
+    scope: '/'
    })
    .then(function() { console.log('Service Worker Registered');  });
   }
