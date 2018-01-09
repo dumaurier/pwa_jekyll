@@ -2,7 +2,7 @@
 title: Jekyll PWA Starter
 timezone: UTC
 destination: _site/
-domainname: https://pwa-jekyll-starter.netlify.com
+domainname: https://pwa-jekyll-starter.netlify.com 
 baseurl: /
 sitename: My Website
 assetsurl: /static-assets/
