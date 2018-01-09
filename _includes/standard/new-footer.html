@@ -3,7 +3,7 @@
  <ul class="indieweb-social h-card">
   {% for social in site.data.me.social %}
     <li>
-      <a href="{{social.url}}" rel="me">
+      <a href="{{social.url}}" rel="me" class="{{ social.class }}">
         {{ social.name }}
       </a>
     </li>
