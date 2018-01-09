@@ -1,12 +1,10 @@
 ---
-title: This is a test
-all: true
 layout: posts
-short-desc: This is a demo post from Jekyll Admin
-permalink: "/posts/:title/"
-date: '2018-01-05 22:16:01 +0000'
+title: This is a test
+date: 2018-01-05 22:16:01 +0000
+permalink: /posts/:title/
+author: Josh Vogt
+abstract: This post is a demonstration of indieweb blogging.
 ---
-
-# Hello World
 
 This is some content

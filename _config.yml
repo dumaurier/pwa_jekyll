@@ -2,7 +2,7 @@
 title: Jekyll PWA Starter
 timezone: UTC
 destination: _site/
-domainname: no name
+domainname: https://pwa-jekyll-starter.netlify.com/
 baseurl: /
 sitename: My Website
 assetsurl: /static-assets/
@@ -44,7 +44,8 @@ defaults:
       type: posts
     values:
       layout: posts
-      short-desc: short desciption of your post.
+      abstract: short desciption of your post.
+      author: Josh Vogt
 
 languages: ['en', 'fr']
 language_data: data.i18n.lang.%%

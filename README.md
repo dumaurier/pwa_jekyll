@@ -1,6 +1,6 @@
 # Jekyll PWA Starter
 
-A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell.  
+A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell.
 
 ## What's Inside?
 ### Critical CSS
@@ -79,7 +79,8 @@ defaults:
       type: posts
     values:
       layout: posts
-      short-desc: short desciption of your post.
+      abstract: short desciption of your post.
+      author: Josh Vogt
 ```
 The site will need to be rebuilt if changes to the `_config.yml` are made before they will be available in the Admin UI.
 

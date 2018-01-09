@@ -22,10 +22,10 @@ body{
 }
 
 main {
-   flex-grow: 1;
+    flex-grow: 1;
     display: block;
     max-width: 100%;
-    width: 100%; //Why are both max-width and width set to 100%?
+    width: 100%;
     height: auto;
     position: static;
     &:focus {

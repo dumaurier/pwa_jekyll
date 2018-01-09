@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" class="online">
+---
+layout: standard
+---
 
-  {% include standard/new-head.html %}
+<article class="post h-entry">
+  <header>
+    <h1 class="p-name">{{ page.title }}</h1>
+    <p>Published by <a class="p-author h-card" href="https://joshvogt.co">{{ page.author }}</a>
+     on <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
+     <p class="p-summary"><em>{{ page.short-desc }}</em></p>
+  </header>
 
-  <body>
-
-    {% include standard/new-header.html %}
-
-      <main class="post">
-       {{ content }}
-      </main>
-
-
-    {% include standard/new-footer.html %}
-
-  </body>
-
-</html>
+{{ content }}
+</main>
