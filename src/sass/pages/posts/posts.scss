@@ -1,5 +1,15 @@
+.post-container{
+  margin-top: 4rem;
+}
+
 .post{
  max-width: 800px;
  padding: 10 20px;
  margin: 0 auto;
+}
+
+.post-container p{
+  @include font-size(1.125);
+  line-height: 1.4;
+  max-width: 640px;
 }
