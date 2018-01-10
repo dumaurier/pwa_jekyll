@@ -1,12 +1,20 @@
+.global-footer{
+  min-height: 130px;
+}
+
 .indieweb-social{
  list-style: none;
  margin: 0;
  padding: 20px;
- max-width: 400px;
  display: grid;
- grid-template-columns: repeat(4, 1fr);
+ grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
  li + li{
   margin-top: 0;
  }
+}
+
+.footer-bio{
+  max-width: 460px;
+  padding: 20px;
 }

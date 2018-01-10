@@ -1,7 +1,7 @@
 <footer class="global-footer" role="contentinfo">
 
  <ul class="indieweb-social h-card">
-  {% for social in site.data.me.social %}
+  {% for social in site.data.about.social %}
     <li>
       <a href="{{social.url}}" rel="me" class="{{ social.class }}">
         {{ social.name }}
@@ -9,8 +9,10 @@
     </li>
   {% endfor %}
 </ul>
- <p>
-  &copy; 2018
+
+ {% assign about = site.data.about.me %}
+ <p class="p-note footer-bio">
+   {{ about.bio }} &copy; {{ site.time | date: '%Y' }} {{ about.name }}
  </p>
 </footer>
 
