@@ -1,0 +1,21 @@
+me:
+  name: Josh Vogt
+  bio: >-
+    This is a bio/note for use with the microformats 2 h-card. This helps other
+    machines to understand your content for IndieWeb publishing.
+social:
+  - name: twitter
+    url: 'https://twitter.com/jshvgt'
+    class: u-url;
+  - name: github
+    url: 'https://github.com/dumaurier'
+    class: u-url;
+  - name: email
+    url: 'mailto:youremail@domain.com'
+    class: u-email
+  - name: sms
+    url: 'sms:+14169671111'
+    class: u-tel
+  - name: my site
+    url: 'https://pwa-jekyll-starter.netlify.com/'
+    class: u-url
