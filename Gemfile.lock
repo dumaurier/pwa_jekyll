@@ -19,7 +19,7 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-admin (0.7)
+    jekyll-admin (0.6)
       addressable (~> 2.4)
       jekyll (~> 3.1)
       sinatra (~> 1.4)
