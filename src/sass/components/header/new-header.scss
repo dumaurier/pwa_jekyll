@@ -1,5 +1,5 @@
 .header-container{
- width: 100vw;
+ width: 100%;
  border-bottom: .15rem solid $grey;
  height: 3.5rem;
  display: flex;
@@ -8,5 +8,6 @@
  h1{
   @include font-size(1);
   margin: 0 0 0 20px;
- } 
+ }
 }
+ 

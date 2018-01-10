@@ -1,8 +1,8 @@
 me:
   name: Josh Vogt
   bio: >-
-    This is a bio/note for use with the microformats 2 h-card. This helps other
-    machines to understand your content for IndieWeb publishing.
+    This is a bio for use with the microformats h-card. This helps other
+    machines understand your content for IndieWeb publishing.
 social:
   - name: twitter
     url: 'https://twitter.com/jshvgt'
