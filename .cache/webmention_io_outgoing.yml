@@ -1,0 +1,5 @@
+---
+"/posts/test-one/": {}
+"/posts/this-is-a-test/": {}
+http://localhost:4000/posts/test-one/: {}
+http://localhost:4000/posts/this-is-a-test/: {}

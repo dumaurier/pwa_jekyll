@@ -20,9 +20,10 @@
 </footer>
 
 {% if page.pagejs %}
- <script  src="static-assets/js/{{ page.pagejs }}"></script>
+ <script  src="{{ site.baseurl }}static-assets/js/{{ page.pagejs }}"></script>
 {% endif %}
 
+<script  src="{{ site.baseurl }}static-assets/js/JekyllWebmentionIO.js"></script>
 <script>
 // Ye Olde Service Worker----------------------------------------------
 (function() {

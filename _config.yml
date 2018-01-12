@@ -2,7 +2,7 @@
 title: Jekyll PWA Starter
 timezone: UTC
 destination: _site/
-domainname: https://pwa-jekyll-starter.netlify.com 
+domainname: https://pwa-jekyll-starter.netlify.com
 baseurl: /
 sitename: My Website
 assetsurl: /static-assets/
@@ -25,6 +25,17 @@ plugins_dir:
 - jekyll-language-plugin
 sass:
   style: :compressed
+
+webmentions:
+  username: pwa-jekyll-starter.netlify.com
+  # Use my own cache folder
+  cache_folder: .cache
+  # skip bad URLs for 5 days
+  cache_bad_uris_for: 5
+  js:
+    destination: static-assets/js/
+    uglify: false
+    deploy: false
 
 # front matter defaults for pages and posts. These fields are also available for editing in the Jekyll Admin GUI. This is available at localhost:4000/admin
 defaults:
