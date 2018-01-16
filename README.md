@@ -1,6 +1,6 @@
 # Jekyll PWA Starter
 
-A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell.
+A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell. Inital support for IndieWeb blogging is in progress. Edit the details in `_data/about.yml` to change `h-card` info.
 
 ## What's Inside?
 ### Critical CSS
