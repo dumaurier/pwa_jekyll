@@ -25,6 +25,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/static-assets/images/icon-16x16.png">
   <link rel="mask-icon" href="static-assets/images/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="icon" href="favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="My Website RSS" href="/feed.xml">
   <title>Page</title>
 
 
@@ -42,7 +43,10 @@
   <meta property="twitter:site" content="@jshvgt"  />
   <meta property="twitter:creator" content="@jshvgt"  />
   <meta property="twitter:description" content="site description"  />
-
+  <link rel="pingback" href="https://webmention.io/pwa-jekyll-starter.netlify.com/xmlrpc" />
+  <link rel="webmention" href="https://webmention.io/pwa-jekyll-starter.netlify.com/webmention" />
+  <link rel="authorization_endpoint"
+        href="https://indieauth.com/auth">
   
 
   
@@ -50,9 +54,9 @@
   
 
   <style>
-  *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;text-decoration-color:#cf4829}a:focus,a:hover{text-decoration:underline}.disabled-link{cursor:not-allowed;color:#f2f4f5}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f2f4f5;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}.global-footer{min-height:130px}.indieweb-social{list-style:none;margin:0;padding:20px;display:grid;grid-template-columns:repeat(auto-fill, minmax(100px, 1fr))}.indieweb-social li+li{margin-top:0}.footer-bio{max-width:460px;padding:20px}.header-container{width:100vw;border-bottom:0.15rem solid #525967;height:3.5rem;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.header-container h1{font-size:16px;font-size:1rem;margin:0 0 0 20px}
+  *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;text-decoration-color:#cf4829}a:focus,a:hover{text-decoration:underline}.disabled-link{cursor:not-allowed;color:#f2f4f5}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f2f4f5;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}.global-footer{min-height:130px}.indieweb-social{list-style:none;margin:0;padding:20px;display:grid;grid-template-columns:repeat(auto-fill, minmax(100px, 1fr))}.indieweb-social li+li{margin-top:0}.footer-bio{max-width:460px;padding:20px}.header-container{-ms-flex:0 0 60px;flex:0 0 60px;width:100vw;border-bottom:0.15rem solid #525967;height:3.5rem;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center}.header-container h1{font-size:16px;font-size:1rem;margin:0 0 0 20px}
 
-    .home{padding:2rem}.block{background:#ffffff;padding:1.25rem;width:100%}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:1.3rem}
+    .home{padding:15px}.home h1{margin-top:0;font-size:32px;font-size:2rem}.block{background:#fff;width:100%}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:1.3rem}
 
    
   </style>
@@ -64,51 +68,63 @@
   
 
  
-
 </head>
 
 
   <body>
-
-
-
     <header class="header-container">
   <h1><a href="/">My Website</a></h1>
 </header>
 
-      <main>
-        <main id="main" class="home" tabindex="0">
- <section class="block">
+
+    <main id="main" class="home" tabindex="0">
+      <section class="block">
   <h1>Jekyll PWA Starter</h1>
   <p>
-   A simple Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll PWA Stater on GitHub.</a>
+   A Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll PWA Stater on GitHub.</a>
   </p>
+	<p>
+	This is a boilerplate project to start writing with Jekyll. It can be published with your own host or directly on GitHub. You can also use other free hosting services like Netlify, CloudFlare or CloudCannon.
+	</p>
+	<p>
+	This Jekyll boilerplate includes:
+	<ul>
+	<li>Critical CSS</li>
+	<li>Service Worker</li>
+	<li>Web App manifest</li>
+	<li>RSS feed</li>
+	<li>IndieWeb microformats</li>
+	</ul>
+	</p>
  </section>
   <section class="block">
-   <ul class="posts-list">
+    <h2>Blog</h2>
+      <ul class="posts-list">
+        
+        <li>
+          <a href="/posts/blog/this-is-a-test/">This is a test - January 05, 2018</a>
+          <p>This post is a demonstration of indieweb blogging.</p>
+        </li>
        
-       <li>
-         <a href="/posts/this-is-a-test/">This is a test - January 05, 2018</a>
-         <p>
-           This post is a demonstration of indieweb blogging.
-         </p>
-       </li>
-
+        <li>
+          <a href="/posts/blog/test-one/">Welcome to Jekyll! - November 17, 2015</a>
+          <p>short desciption of your post.</p>
+        </li>
        
-       <li>
-         <a href="/posts/test-one/">Welcome to Jekyll! - November 17, 2015</a>
-         <p>
-           short desciption of your post.
-         </p>
-       </li>
-
-       
-   </ul>
+      </ul>
+      <h2>Notes</h2>
+        <ul class="posts-list">
+          
+          <li>
+            <p>
+              This is just a note.
+            </p>
+            <a href="/posts/note/this-is-a-test0/">Read full note &raquo; </a>
+          </li>
+         
+        </ul>
   </section>
-</main>
-
-      </main>
-
+    </main>
 
     <footer class="global-footer" role="contentinfo">
   <div class="indieweb-card h-card">
@@ -127,7 +143,7 @@
        </li>
      
        <li>
-         <a href="mailto:youremail@domain.com" rel="me" class="u-email">
+         <a href="mailto:joshvogt@gmail.com" rel="me" class="u-email">
            email
          </a>
        </li>
@@ -148,7 +164,7 @@
 
     
     <p class="p-note footer-bio">
-      This is a bio/note for use with the microformats 2 h-card. This helps other machines to understand your content for IndieWeb publishing. &copy; 2018 Josh Vogt
+      This is a bio for use with microformats h-card. This helps other machines understand your content for IndieWeb publishing. &copy; 2018 Josh Vogt
     </p>
   </div>
 
@@ -156,7 +172,7 @@
 </footer>
 
 
- <script  src="static-assets/js/home.js"></script>
+ <script  src="/static-assets/js/home.js"></script>
 
 
 <script>
@@ -175,5 +191,4 @@
 
 
   </body>
-
 </html>
