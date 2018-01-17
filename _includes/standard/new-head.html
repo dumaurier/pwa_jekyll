@@ -22,6 +22,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}static-assets/images/icon-16x16.png">
   <link rel="mask-icon" href="static-assets/images/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="icon" href="favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.sitename}} RSS" href="/feed.xml">
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 
@@ -39,7 +40,10 @@
   <meta property="twitter:site" content="@jshvgt"  />
   <meta property="twitter:creator" content="@jshvgt"  />
   <meta property="twitter:description" content="site description"  />
-
+  <link rel="pingback" href="https://webmention.io/pwa-jekyll-starter.netlify.com/xmlrpc" />
+  <link rel="webmention" href="https://webmention.io/pwa-jekyll-starter.netlify.com/webmention" />
+  <link rel="authorization_endpoint"
+        href="https://indieauth.com/auth">
   {% capture styles %}
     {% include critical/new-critical.css %}
   {% endcapture %}
@@ -71,5 +75,4 @@
     loadCSS("{{ site.baseurl }}static-assets/css/new-base-820ec1693e.css");
  </script>
  {% endif %}
- {% webmentions_head %}
 </head>
