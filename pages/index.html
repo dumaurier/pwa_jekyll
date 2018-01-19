@@ -2,7 +2,7 @@
 title: Jekyll + PWA + IndieWeb
 all: true
 page_only: true
-layout: standard
+layout: default
 permalink: "/"
 pagestyle: home.css
 pagejs: home.js
@@ -50,3 +50,14 @@ pagejs: home.js
          {% endfor %}
         </ul>
   </section>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
