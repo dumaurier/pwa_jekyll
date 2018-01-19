@@ -1,11 +1,9 @@
 ---
+title: Netlify CMS Take One
+date: '2018-01-05 22:16:01 +0000'
 layout: posts
-title: This is a note
-date: 2018-01-05 22:16:01 +0000
-permalink: /posts/:categories/:title/
+categories: note
+abstract: Testing out Netlify CMS
 author: Josh Vogt
-abstract: This is just a note.
-categories: blog
 ---
-
-note note noten notenitoeint
+Test setting up the Netlify CMS.
