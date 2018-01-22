@@ -68,6 +68,7 @@
   
 
  
+ <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 
@@ -83,7 +84,7 @@
   <p>
    A Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll + PWA + IndieWeb Stater on GitHub.</a>
   </p>
-  <h2>Own your own damn content</h2>
+  <h2>Own you content</h2> 
 	<p>
 	This is a boilerplate project to start writing with Jekyll. It can be published with your own host or directly on GitHub. You can also use other free hosting services like Netlify, CloudFlare or CloudCannon.
 	</p>
@@ -118,13 +119,31 @@
           
           <li>
             <p>
-              This is just a note.
+              a thing
             </p>
-            <a href="/posts/note/this-is-a-test0/">Read full note &raquo; </a>
+            <a href="/note/2018/01/18/things.html">Read full note &raquo; </a>
+          </li>
+         
+          <li>
+            <p>
+              Testing out Netlify CMS
+            </p>
+            <a href="/note/2018/01/05/this-is-a-test0.html">Read full note &raquo; </a>
           </li>
          
         </ul>
   </section>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
     </main>
 
@@ -172,6 +191,7 @@
 
 
 </footer>
+
 
 
  <script  src="/static-assets/js/home.js"></script>

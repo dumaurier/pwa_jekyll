@@ -15,4 +15,42 @@ layout: standard
   <div class="e-content post-container">
     {{ content }}
   </div>
+
+  <aside class="post-webmentions" id="webmentions-container">
+    <h2>Mentions</h2>
+
+  </aside>
 </article>
+
+<template id="mention-tmpl">
+  <div class="mention-item">
+    <strong class="mention-author"></strong>
+    <a class=="mention-link" href=""></a>
+  </div>
+</template>
+
+<script async>
+  const page = "{{ site.domainname}}{{ page.url }}";
+  const webmention = "http://webmention.io/api/mentions?target=";
+
+  let request = webmention + page;
+
+  fetch(request)
+  .then(response => response.json())
+  .then(data => {
+    if(data.links.length == 0){
+      console.log('no mentions yet');
+    }
+    else{
+      data.links.forEach(function(mention){
+        var tmplContainer = document.querySelector('#webmentions-container');
+        
+        console.log(mention.activity.sentence);
+      });
+    }
+    console.log(data)
+  });
+
+  console.log(page);
+  console.log(request);
+</script>
