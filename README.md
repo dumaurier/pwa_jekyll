@@ -1,6 +1,26 @@
-# Jekyll PWA Starter
+# Jekyll + PWA + IndieWeb
 
-A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell. Inital support for IndieWeb blogging is in progress. Edit the details in `_data/about.yml` to change `h-card` info.
+A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell. Basic support for IndieWeb Blogging is included. Display webmentions is included as well but requires a few extra steps to set up.
+
+## Getting Started:
+1. **Fork this repo.** If you're new to GitHub you can read about [forking repos](https://help.github.com/articles/fork-a-repo/#use-someone-elses-project-as-a-starting-point-for-your-own-idea) on GitHub's documentation.
+2. **Rename the repo.**  This isn't 100% necessary but you should rename if you want to host it on [Netlify](https://netlify.com) without setting up a custom domain. Follow [these instructions](https://help.github.com/articles/renaming-a-repository/) to rename the forked repo.
+3. **Edit your Information.**  Edit the contents of the `about.yml` file in `/_data/`. This will enable IndieWeb publishing on your site. You can read more about it in context of the this repo [here](#Indieweb).
+4. **Create a Netlify account** Why Netlify? It's really nice. And they have a boss CMS available. This means you don't have to mess with code if you don't feel like it. You can either sign in or create your account using your existing GitHub account.
+5. **Create your new site** Once you've signed up for Netlify, click the big `New site from Git` button.
+    1. Select the `GitHub` option on the following screen.
+    2. Select the repo you want to to deploy. Let's say you renamed this repo to `chowder` or something equally weird, click on that repo to select it for deplayment.
+    3. On the next screen, you can safely ignore all the other options and just hit `Depoy Site`. Netlify will assign a subdomain for your site and publish it. You either leave it as is, pick a more suitable subdomain or check Netlify's docs for instructions on [setting up a custom domain](https://www.netlify.com/docs/custom-domains/).
+
+## Changing the CSS
+There isn't a lot of style here. Barely any at all. If you want to change things around you can run your site locally and make the changes you feel like. The SCSS file for the home page is in `src/sass/pages/home/home.scss` and the SCSS file for posts pages are in `src/sass/pages/posts/posts.scss`.
+
+## Next Steps
+**Using Netlify's CMS to write for your site**
+Most of the configurations needed to use Netlify's CMS with your site are already included in this repo. However, some things most be handled through your Netlify account. Carefully follow the instructions for CMS authentication here: [authentication for Netlify](https://www.netlifycms.org/docs/add-to-your-site/#authentication).  Once you've followed the steps provided you should be able to access the CMS for your site at https://yourdomain.com/admin/
+
+If things got weird or didn't work as expected please open an [issue](https://github.com/dumaurier/pwa_jekyll/issues) and I'll try to help.
+
 
 ## What's Inside?
 ### Critical CSS
@@ -32,6 +52,36 @@ layout: standard
 pagestyle: home.css
 ---
 ```
+
+### IndieWeb
+This instance of Jekyll has support for the `h-card` microformat that is used by IndieWeb sites to identify content and authorship. You can read more about it on [IndieWeb.org](https://indieweb.org/h-card). Editing the contents in `_data/about.yml` will enable h-card microformats for IndieWeb publshing.
+
+The content of the file look like this:
+```
+me:
+  name: Josh Vogt
+  bio: >-
+    This is a bio for use with microformats h-card. This helps other
+    machines understand your content for IndieWeb publishing.
+social:
+  - name: twitter
+    url: 'https://twitter.com/jshvgt'
+    class: u-url;
+  - name: github
+    url: 'https://github.com/dumaurier'
+    class: u-url;
+  - name: email
+    url: 'mailto:joshvogt@gmail.com'
+    class: u-email
+  - name: sms
+    url: 'sms:+14169671111'
+    class: u-tel
+  - name: my site
+    url: 'https://pwa-jekyll-starter.netlify.com/'
+    class: u-url
+```
+
+Include your own details in this file. You don't need to include any social network information if you don't want to but you'll need at least one available if you want to be able to sign in to site using just you domain address. It's worth it.
 
 ### Progressive Web App
 The project includes a simple Service Worker to cache the application shell. To include additional resources to the App Shell they need to be added in the `sw.js` file.
@@ -107,6 +157,7 @@ Translations should be added to the `lang.yml` file located at `_data/i18n/`. Mo
 
 
 ## Application Requirements
+***Note:*** If you run the site through Netlify and use Netlify CMS you don't need a darn thing.
 
 1. Ruby
 2. Jekyll
