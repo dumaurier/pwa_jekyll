@@ -1,19 +1,16 @@
 # Jekyll + PWA + IndieWeb
 
-A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell. Basic support for IndieWeb Blogging is included. Display webmentions is included as well but requires a few extra steps to set up.
+A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell. Basic support for IndieWeb Blogging is included, including an RSS feed. Displaying webmentions is included as well but requires a few extra steps to set up.
 
 ## Getting Started:
 1. **Fork this repo.** If you're new to GitHub you can read about [forking repos](https://help.github.com/articles/fork-a-repo/#use-someone-elses-project-as-a-starting-point-for-your-own-idea) on GitHub's documentation.
 2. **Rename the repo.**  This isn't 100% necessary but you should rename if you want to host it on [Netlify](https://netlify.com) without setting up a custom domain. Follow [these instructions](https://help.github.com/articles/renaming-a-repository/) to rename the forked repo.
 3. **Edit your Information.**  Edit the contents of the `about.yml` file in `/_data/`. This will enable IndieWeb publishing on your site. You can read more about it in context of the this repo [here](#Indieweb).
-4. **Create a Netlify account** Why Netlify? It's really nice. And they have a boss CMS available. This means you don't have to mess with code if you don't feel like it. You can either sign in or create your account using your existing GitHub account.
+4. **Create a Netlify account** Why Netlify? It's really nice. And they have a boss CMS available. This means you don't have to mess with code if you don't feel like it. You can either sign in or create your account using your existing GitHub account. Creating your account at [Netlify Sign up](https://app.netlify.com/signup)
 5. **Create your new site** Once you've signed up for Netlify, click the big `New site from Git` button.
     1. Select the `GitHub` option on the following screen.
     2. Select the repo you want to to deploy. Let's say you renamed this repo to `chowder` or something equally weird, click on that repo to select it for deplayment.
     3. On the next screen, you can safely ignore all the other options and just hit `Depoy Site`. Netlify will assign a subdomain for your site and publish it. You either leave it as is, pick a more suitable subdomain or check Netlify's docs for instructions on [setting up a custom domain](https://www.netlify.com/docs/custom-domains/).
-
-## Changing the CSS
-There isn't a lot of style here. Barely any at all. If you want to change things around you can run your site locally and make the changes you feel like. The SCSS file for the home page is in `src/sass/pages/home/home.scss` and the SCSS file for posts pages are in `src/sass/pages/posts/posts.scss`.
 
 ## Next Steps
 **Using Netlify's CMS to write for your site**
@@ -21,6 +18,8 @@ Most of the configurations needed to use Netlify's CMS with your site are alread
 
 If things got weird or didn't work as expected please open an [issue](https://github.com/dumaurier/pwa_jekyll/issues) and I'll try to help.
 
+## Changing the CSS
+There isn't a lot of style here. Barely any at all. If you want to change things around you can run your site locally and make the changes you feel like. The SCSS file for the home page is in `src/sass/pages/home/home.scss` and the SCSS file for posts pages are in `src/sass/pages/posts/posts.scss`.
 
 ## What's Inside?
 ### Critical CSS
