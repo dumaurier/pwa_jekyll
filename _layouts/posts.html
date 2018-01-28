@@ -16,24 +16,27 @@ layout: standard
     {{ content }}
   </div>
 
-  <aside class="post-webmentions" id="webmentions-container">
+  <aside class="post-webmentions" hidden>
     <h2>Mentions</h2>
+    <ul class="mentions-list" id="webmentions-container">
 
+    </ul>
   </aside>
 </article>
 
 <template id="mention-tmpl">
-  <div class="mention-item">
-    <strong class="mention-author"></strong>
-    <a class=="mention-link" href=""></a>
-  </div>
+  <li>
+    <div class="mention-item">
+      <p class="mention-author"></p>
+      <a class="mention-link" href=""></a>
+    </div>
+  </li>
 </template>
 
 <script async>
   const page = "{{ site.domainname}}{{ page.url }}";
-  const webmention = "http://webmention.io/api/mentions?target=";
-
-  let request = webmention + page;
+  const webmention = "https://webmention.io/api/mentions?target=";
+  const request = webmention + page;
 
   fetch(request)
   .then(response => response.json())
@@ -42,15 +45,16 @@ layout: standard
       console.log('no mentions yet');
     }
     else{
+      document.querySelector('.post-webmentions').removeAttribute('hidden');
       data.links.forEach(function(mention){
-        var tmplContainer = document.querySelector('#webmentions-container');
-        
-        console.log(mention.activity.sentence);
+        var tmpl = document.getElementById('mention-tmpl').content.cloneNode(true);
+
+        tmpl.querySelector('.mention-author').innerText = mention.activity.sentence;
+        tmpl.querySelector('.mention-link').innerText = mention.data.author.name;
+        tmpl.querySelector('.mention-link').setAttribute('href',mention.data.author.url);
+        document.getElementById('webmentions-container').appendChild(tmpl);
       });
     }
     console.log(data)
   });
-
-  console.log(page);
-  console.log(request);
 </script>
