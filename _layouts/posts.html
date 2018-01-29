@@ -33,7 +33,7 @@ layout: standard
     <form class="mention-form" method="post" action="https://webmention.io/{{ site.data.about.me.webmention }}/webmention">
       <fieldset>
           <label for="url-mention">Add your response:</label>
-          <input id="url-mention" type="url" required placeholder="https://yourdomain/response" />
+          <input id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
           <input type="hidden" name="target" value="{{ site.domainname}}{{ page.url }}"  />
           <button>Send webmention</button>
       </fieldset>
