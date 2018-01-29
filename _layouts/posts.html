@@ -16,13 +16,33 @@ layout: standard
     {{ content }}
   </div>
 
+
+
   <aside class="post-webmentions" hidden>
     <h2>Mentions</h2>
     <ul class="mentions-list" id="webmentions-container">
 
     </ul>
   </aside>
+
+  <div class="mention-repsonse">
+    <h4>Send a response</h4>
+    <p>
+      If you've written a response to this post enter the url of your post and send it over.
+    </p>
+    <form class="mention-form" method="post" action="https://webmention.io/{{ site.domainname }}/webmention">
+      <fieldset>
+        <legend>
+          <label>Add your response:</legend>
+            <input type="url" required placeholder="https://yourdomain/response" />
+          </label>
+          <button>Send webmention</button>
+      </fieldset>
+    </form>
+  </div>
 </article>
+
+
 
 <template id="mention-tmpl">
   <li>
