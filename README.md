@@ -53,7 +53,9 @@ pagestyle: home.css
 ```
 
 ### IndieWeb
-This instance of Jekyll has support for the `h-card` microformat that is used by IndieWeb sites to identify content and authorship. You can read more about it on [IndieWeb.org](https://indieweb.org/h-card). Editing the contents in `_data/about.yml` will enable h-card microformats for IndieWeb publshing.
+This instance of Jekyll has support for the `h-card` microformat that is used by IndieWeb sites to identify content and authorship. You can read more about it on [IndieWeb.org](https://indieweb.org/h-card). Editing the contents in `_data/about.yml` will enable h-card microformats for IndieWeb publshing. 
+
+***Note:*** The webmention entry in the `about.yml` file should match the domain *if* you set up an account on [webmention.io](https://webmention.io). 
 
 The content of the file look like this:
 ```
@@ -83,8 +85,20 @@ social:
 
 Include your own details in this file. You don't need to include any social network information if you don't want to but you'll need at least one available if you want to be able to sign in to site using just you domain address. It's worth it.
 
+### Webmentions
+Webmentions allow other content creators to respond to your posts. The inital implementation is very basic. To get started with webmentions, go to [webmention.io](https://webmention.io) and sign in with your domain (this is assuming you've already edited the contents in `about.yml` and published your site on Netlify). 
+
+The references required to use webmentions are already included in this starter project. However, you will need to add your domain name in the `about.yml` file under the `webmention` entry. When the site builds the endpoints for sending and receiving mentions will be updated with your information.
+
+The `posts` layout includes a snippet of JavaScipt to fetch and render any webmentions after the static content has loaded. This layout also includes a simple form for visitors to manually send webmentions to your site. 
+
+***Note:*** In order for a webmention to be successfully processed the submitted link must contain a link to the page accepting the mention. 
+
+
 ### Progressive Web App
-The project includes a simple Service Worker to cache the application shell. To include additional resources to the App Shell they need to be added in the `sw.js` file.
+The project includes a simple Service Worker to cache the application shell. To include additional resources to the App Shell they need to be added in the `sw.js` file. The service workers version will be updated each time Jekyll builds the site so the cache on the service worker will be automatically busted on each release.
+
+If you don't want the service worker's cache busted remove this `const cacheName = 'sw-{{ site.time | date: '%s'}}';` from the top of the service worker file.  
 
 ```
 var filesToCache = [
@@ -96,9 +110,11 @@ var filesToCache = [
 ];
 ```
 
-To force the browser to update the Service Worker when the site has changed the `cacheName` variable needs to changed.
+The service worker will also create a runtime cache when visitors to your site visit other pages on your site. Visited pages will also be available offline. 
 
 ***Note:*** When developing locally in Chrome the network tabbed should have `Disable cache` checked and in the Application tab the Service Worker section should have `Update on Reload` checked.
+
+***Another Note:*** The runtime caching aspect of the service worker will fully lose its mind when you're developing locally with `BrowserSync` running. Run `bundle exec jekyll serve` if you want to test the runtime caching without `BrowserSync` flipping its lid. 
 
 ### BrowserSync
 Running the site using the default `gulp` task will use BrowserSync. It's a fair bit slower on Windows when compared to a Mac.
