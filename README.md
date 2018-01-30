@@ -4,10 +4,9 @@ A simple Jekyll starter with PWA functionality baked in. This includes a manifes
 
 ## Getting Started:
 1. **Fork this repo.** If you're new to GitHub you can read about [forking repos](https://help.github.com/articles/fork-a-repo/#use-someone-elses-project-as-a-starting-point-for-your-own-idea) on GitHub's documentation.
-2. **Rename the repo.**  This isn't 100% necessary but you should rename if you want to host it on [Netlify](https://netlify.com) without setting up a custom domain. Follow [these instructions](https://help.github.com/articles/renaming-a-repository/) to rename the forked repo.
-3. **Edit your Information.**  Edit the contents of the `about.yml` file in `/_data/`. This will enable IndieWeb publishing on your site. You can read more about it in context of the this repo [here](#Indieweb).
-4. **Create a Netlify account** Why Netlify? It's really nice. And they have a boss CMS available. This means you don't have to mess with code if you don't feel like it. You can either sign in or create your account using your existing GitHub account. Creating your account at [Netlify Sign up](https://app.netlify.com/signup)
-5. **Create your new site** Once you've signed up for Netlify, click the big `New site from Git` button.
+2. **Edit your Information.**  Edit the contents of the `about.yml` file in `/_data/`. This will enable IndieWeb publishing on your site. You can read more about it in context of the this repo [here](#Indieweb).
+3. **Create a Netlify account** Why Netlify? It's really nice. And they have a boss CMS available. This means you don't have to mess with code if you don't feel like it. You can either sign in or create your account using your existing GitHub account. Creating your account at [Netlify Sign up](https://app.netlify.com/signup)
+4. **Create your new site** Once you've signed up for Netlify, click the big `New site from Git` button.
     1. Select the `GitHub` option on the following screen.
     2. Select the repo you want to to deploy. Let's say you renamed this repo to `chowder` or something equally weird, click on that repo to select it for deplayment.
     3. On the next screen, you can safely ignore all the other options and just hit `Depoy Site`. Netlify will assign a subdomain for your site and publish it. You either leave it as is, pick a more suitable subdomain or check Netlify's docs for instructions on [setting up a custom domain](https://www.netlify.com/docs/custom-domains/).
