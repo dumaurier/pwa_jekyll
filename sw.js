@@ -1,5 +1,10 @@
-var cacheName = 'proto1.2';
-var dataCacheName = 'proto1.2';
+---
+layout: null
+---
+
+const cacheName = 'sw-{{ site.time | date: '%s'}}';
+const dataCacheName = 'sw-{{ site.time | date: '%s' }}';
+const RUNTIME = 'runtime';
 
 var getPageURL = location;
 
@@ -7,7 +12,6 @@ var filesToCache = [
  '/manifest.json',
  '/static-assets/js/home.js',
  '/static-assets/css/new-base.css',
- '/index.html',
  '/',
  '404.html'
 ];
@@ -47,24 +51,24 @@ self.addEventListener('activate', function(e) {
 
 
 
-self.addEventListener('fetch', function(e) {
-    //console.log('[Service Worker] Fetch', e.request.url);
-    var dataUrl = '/old/en/';
-    if (e.request.url.indexOf(dataUrl) > -1) {
-        e.respondWith(
-            caches.open(dataCacheName).then(function(cache) {
-                return fetch(e.request).then(function(response){
-                    cache.put(e.request.url, response.clone());
-                    return response;
-                });
-            })
-        );
-    } else {
-        //console.log('what happened');
-        e.respondWith(
-            caches.match(e.request).then(function(response) {
-                return response || fetch(e.request);
-            })
-        );
-    }
+self.addEventListener('fetch', event => {
+  // Skip cross-origin requests, like those for Google Analytics.
+  if (event.request.url.startsWith(self.location.origin)) {
+    event.respondWith(
+      caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+
+        return caches.open(RUNTIME).then(cache => {
+          return fetch(event.request).then(response => {
+            // Put a copy of the response in the runtime cache.
+            return cache.put(event.request, response.clone()).then(() => {
+              return response;
+            });
+          });
+        });
+      })
+    );
+  }
 });

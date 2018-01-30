@@ -40,10 +40,9 @@
   <meta property="twitter:site" content="@jshvgt"  />
   <meta property="twitter:creator" content="@jshvgt"  />
   <meta property="twitter:description" content="site description"  />
-  <link rel="pingback" href="https://webmention.io/pwa-jekyll-starter.netlify.com/xmlrpc" />
-  <link rel="webmention" href="https://webmention.io/pwa-jekyll-starter.netlify.com/webmention" />
-  <link rel="authorization_endpoint"
-        href="https://indieauth.com/auth">
+  <link rel="pingback" href="https://webmention.io/{{ site.about.me.webmention}}/xmlrpc" />
+  <link rel="webmention" href="https://webmention.io/{{ site.about.me.webmention}}/webmention" />
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   {% capture styles %}
     {% include critical/new-critical.css %}
   {% endcapture %}
