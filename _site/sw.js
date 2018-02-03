@@ -1,5 +1,5 @@
-const cacheName = 'sw-1517283574';
-const dataCacheName = 'sw-1517283574';
+const cacheName = 'sw-1517676504';
+const dataCacheName = 'sw-1517676504';
 const RUNTIME = 'runtime';
 
 var getPageURL = location;
@@ -49,7 +49,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
-  if (event.request.url.startsWith(self.location.origin)) {
+  if (event.request.url.startsWith(self.location.origin) && !event.request.url.endsWith('.js')) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
