@@ -1,5 +1,5 @@
-const cacheName = 'sw-1517677211';
-const dataCacheName = 'sw-1517677211';
+const cacheName = 'sw-1517677915';
+const dataCacheName = 'sw-1517677915';
 const RUNTIME = 'runtime';
 
 var getPageURL = location;
@@ -49,7 +49,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
-  if (event.request.url.startsWith(self.location.origin) && !event.request.url.endsWith('.js') && !event.request.url.endsWith('.netlify/**')) {
+  if (event.request.url.startsWith(self.location.origin) && !event.request.url.endsWith('.js') && !event.request.url.endsWith('token') && !event.request.url.endsWith('recover') && !event.request.url.endsWith('verify')) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
