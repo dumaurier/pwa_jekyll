@@ -21,6 +21,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Categories", name: "categories", widget: "string", default: "blog"}
       - {label: "Abstract", name: "abstract", widget: "markdown"}
       - {label: "Author", name: "author", widget: "text"}
+      - {label: "permalink", name: "permalink", widget: "text", default: "/posts/:categories/:title/"}
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
   - name: "notes" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -38,6 +39,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Categories", name: "categories", widget: "string", default: "note"}
       - {label: "Abstract", name: "abstract", widget: "markdown"}
       - {label: "Author", name: "author", widget: "text"}
+      - {label: "permalink", name: "permalink", widget: "text", default: "/posts/:categories/:title/"}
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
   - name: "links" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -50,10 +52,12 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma"}
+      - {label: "Link", name: "link", widget: "string"}      
+      - {label: "Abstract", name: "abstract", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "posts"}
       - {label: "Categories", name: "categories", widget: "string", default: "link"}
-      - {label: "Link", name: "link", widget: "string"}
+      - {label: "permalink", name: "permalink", widget: "text", default: "/posts/:categories/:title/"}
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
       

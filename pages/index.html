@@ -54,9 +54,7 @@ pagejs: home.js
         <ul class="posts-list">
           {% for post in site.categories.link %}
           <li>
-            <p>
-              {{ post.body }}
-            </p>
+              {{ post.content }}
             <a href="{{ post.link }}">{{ post.title }}</a>
           </li>
          {% endfor %}

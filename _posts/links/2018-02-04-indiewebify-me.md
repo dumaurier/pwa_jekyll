@@ -5,6 +5,7 @@ layout: posts
 categories: link
 link: 'https://indiewebify.me/'
 author: Josh Vogt
+permalink: /posts/:categories/:title/
 ---
 # IndieWebify.Me
 
