@@ -1,5 +1,5 @@
 ---
-title: IndieWebify.Me
+title: IndieWebifyMe
 date: '2018-02-04 12:18am'
 layout: posts
 categories: link
