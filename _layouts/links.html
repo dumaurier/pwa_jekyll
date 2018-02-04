@@ -1,0 +1,80 @@
+---
+layout: standard
+---
+
+<article class="post h-entry">
+  <header>
+    <h1 class="p-name">
+        <a href="{{ page.link }}">{{ page.title }}</a>
+    </h1>
+    <p>Linked added by <a class="p-author h-card" href="https://joshvogt.co">{{ page.author }}</a>
+     on <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
+     <p>
+       <a class="u-url" href="{{ site.domainname }}{{ page.url }}">Permalink</a>
+     </p>
+  </header>
+  
+  <div class="e-content post-container">
+    {{ content }}
+  </div>
+
+
+  <aside class="post-webmentions" hidden>
+    <h2>Mentions</h2>
+    <ul class="mentions-list" id="webmentions-container">
+
+    </ul>
+  </aside>
+
+  <div class="mention-response">
+    <h4>Send a response</h4>
+    <p>
+      If you've written a response to this post enter the url of your post and send it over.
+    </p>
+    <form class="mention-form" method="post" action="https://webmention.io/{{ site.data.about.me.webmention }}/webmention">
+      <fieldset>
+          <label for="url-mention">Add your response:</label>
+          <input id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
+          <input type="hidden" name="target" value="{{ site.domainname}}{{ page.url }}"  />
+          <button>Send webmention</button>
+      </fieldset>
+    </form>
+  </div>
+</article>
+
+
+
+<template id="mention-tmpl">
+  <li>
+    <div class="mention-item">
+      <p class="mention-author"></p>
+      <a class="mention-link" href=""></a>
+    </div>
+  </li>
+</template>
+
+<script async>
+  const page = "{{ site.domainname}}{{ page.url }}";
+  const webmention = "https://webmention.io/api/mentions?target=";
+  const request = webmention + page;
+
+  fetch(request)
+  .then(response => response.json())
+  .then(data => {
+    if(data.links.length == 0){
+      console.log('no mentions yet');
+    }
+    else{
+      document.querySelector('.post-webmentions').removeAttribute('hidden');
+      data.links.forEach(function(mention){
+        var tmpl = document.getElementById('mention-tmpl').content.cloneNode(true);
+
+        tmpl.querySelector('.mention-author').innerText = mention.activity.sentence;
+        tmpl.querySelector('.mention-link').innerText = mention.data.author.name;
+        tmpl.querySelector('.mention-link').setAttribute('href',mention.data.author.url);
+        document.getElementById('webmentions-container').appendChild(tmpl);
+      });
+    }
+    console.log(data)
+  });
+</script>

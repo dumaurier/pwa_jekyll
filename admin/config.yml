@@ -54,8 +54,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma"}
       - {label: "Link", name: "link", widget: "string"}      
       - {label: "Abstract", name: "abstract", widget: "markdown"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "posts"}
+      - {label: "Body", name: "body", widget: "text"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "links"}
       - {label: "Categories", name: "categories", widget: "string", default: "link"}
       - {label: "permalink", name: "permalink", widget: "text", default: "/posts/:categories/:title/"}
     meta:

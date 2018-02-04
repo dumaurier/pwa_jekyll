@@ -53,6 +53,12 @@
   {% endcapture %}
   {% endif %}
 
+  {% if page.layout == "links" %}
+  {% capture postsStyle %}
+    {% include critical/posts.css %}
+  {% endcapture %}
+  {% endif %}
+
   {% if page.pagestyle %}
    {% capture critical %}
     {% include critical/{{ page.pagestyle }} %}
