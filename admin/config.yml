@@ -11,7 +11,7 @@ collections: # A list of collections the CMS should be able to edit
     description: >
       Traditional blog posts.
     folder: "_posts"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}/"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -28,7 +28,7 @@ collections: # A list of collections the CMS should be able to edit
     description: >
       Short notes.
     folder: "_posts/notes"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}/"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -45,7 +45,7 @@ collections: # A list of collections the CMS should be able to edit
     description: >
       Links
     folder: "_posts/links"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}/"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -54,7 +54,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "posts"}
       - {label: "Categories", name: "categories", widget: "string", default: "link"}
       - {label: "Link", name: "link", widget: "string"}
-      - {label: "Author", name: "author", widget: "text"}
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
       
