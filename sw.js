@@ -53,7 +53,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
-  if (event.request.url.startsWith(self.location.origin) && !event.request.url.endsWith('.js') && !event.request.url.startsWith(self.location.origin + 'netlify/')) {
+  if (event.request.url.startsWith(self.location.origin) && !event.request.url.endsWith('.js') && !event.request.url.startsWith(self.location.origin + '/.netlify/')) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
