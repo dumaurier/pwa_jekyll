@@ -50,6 +50,17 @@ pagejs: home.js
           </li>
          {% endfor %}
         </ul>
+        <h2>Links</h2>
+        <ul class="posts-list">
+          {% for post in site.categories.link %}
+          <li>
+            <p>
+              {{ post.body }}
+            </p>
+            <a href="{{ post.link }}">{{ post.title }}</a>
+          </li>
+         {% endfor %}
+        </ul>
   </section>
   <script>
   if (window.netlifyIdentity) {
