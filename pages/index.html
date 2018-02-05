@@ -8,28 +8,34 @@ pagestyle: home.css
 pagejs: home.js
 ---
 
-<section class="block">
-  <h1>Jekyll + PWA + IndieWeb Starter</h1>
-  <p>
-   A Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll + PWA + IndieWeb Stater on GitHub.</a>
-  </p>
+<h1 class="heading">Jekyll + PWA + IndieWeb Starter</h1>
+<p class="heading-sub">
+    A Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll + PWA + IndieWeb Stater on GitHub.</a>
+</p>
+
+<section class="block indie-intro">
+  
   <h2>Own your content</h2>
+
 	<p>
 	This is a boilerplate project to start writing with Jekyll. It can be published with your own host or directly on GitHub. You can also use other free hosting services like Netlify, CloudFlare or CloudCannon.
-	</p>
+  </p>
+  
 	<p>
 	This Jekyll boilerplate includes:
 	<ul>
-	<li>Critical CSS</li>
-	<li>Service Worker</li>
-	<li>Web App manifest</li>
-	<li>RSS feed</li>
-	<li>IndieWeb microformats</li>
-  <li>Webmentions</li>  
-	</ul>
+	  <li>Critical CSS</li>
+	  <li>Service Worker</li>
+	  <li>Web App manifest</li>
+	  <li>RSS feed</li>
+	  <li>IndieWeb microformats</li>
+    <li>Webmentions</li>  
+  </ul>
+  
 	</p>
  </section>
-  <section class="block">
+
+  <section class="block feed-block">
     <h2>Blog</h2>
       <ul class="posts-list">
         {% for post in site.categories.blog %}
@@ -53,9 +59,10 @@ pagejs: home.js
         <h2>Links</h2>
         <dl class="links-list">
           {% for post in site.categories.link %}
-          <dt>{{ post.content }}</dt>
+          <dt><a href="{{ post.link}}">{{ post.title }}</a></dt>
             <dd>
-            <a href="{{ post.link}}">{{ post.title }}</a>
+              {{ post.content }}
+              <a href="{{ post.url }}">View Permalink</a>
             </dd>
          {% endfor %}
         </dl>

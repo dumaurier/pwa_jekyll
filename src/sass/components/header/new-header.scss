@@ -7,7 +7,20 @@
  align-items: center;
 
  h1{
-  @include font-size(1);
+  @include font-size(1.225);
   margin: 0 0 0 20px;
+    
+    a{
+        font-weight: 700;
+    }
+ }
+
+ .header-links{
+     margin: 0 3rem;
+
+     a{
+         padding: 0 5px;
+         text-decoration-color: $color-green;
+     }
  }
 }
