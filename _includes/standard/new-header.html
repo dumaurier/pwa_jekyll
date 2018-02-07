@@ -1,5 +1,11 @@
 <header class="header-container">
-  <h1><a href="{{ site.baseurl }}">{{ site.sitename }}</a></h1>
+  <h1>
+    <a class="home-link" href="{{ site.baseurl }}">
+        <img class="site-logo" src="{{ site.baseurl }}static-assets/images/icon-192x192.png" alt="logo for {{ site.sitename }}" />
+    {{ site.sitename }}
+    </a>
+</h1>
+
   <nav class="header-links">
     <a href="{{ site.baseurl }}posts/">Posts</a>
     <a href="{{ site.baseurl }}notes/">Notes</a>

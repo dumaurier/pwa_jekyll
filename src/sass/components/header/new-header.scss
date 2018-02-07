@@ -5,22 +5,40 @@
  height: 3.5rem;
  display: flex;
  align-items: center;
+ justify-content: space-between;
 
  h1{
-  @include font-size(1.225);
   margin: 0 0 0 20px;
-    
-    a{
-        font-weight: 700;
-    }
+  @include font-size(0.875);
+  font-weight: 600;
+ }
+ 
+.home-link{
+    display: inline-block; 
+    white-space: nowrap;
+    line-height: 60px;
+    height: 100%;
+}
+
+ .site-logo{
+     width: 55px;
+     float: left;
+     margin-right: .5rem;
  }
 
  .header-links{
-     margin: 0 3rem;
+     margin: 0;
 
      a{
          padding: 0 5px;
-         text-decoration-color: $color-green;
+         text-decoration-color: $color-purple;
+         color: $grey-dark;
      }
  }
+}
+
+@media screen and (min-width: 30rem){
+    .header-links{
+        margin: 0 3rem;
+    }
 }

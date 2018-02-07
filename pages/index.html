@@ -57,15 +57,15 @@ pagejs: home.js
          {% endfor %}
         </ul>
         <h2>Links</h2>
-        <dl class="links-list">
+        <ul class="links-list">
           {% for post in site.categories.link %}
-          <dt><a href="{{ post.link}}">{{ post.title }}</a></dt>
-            <dd>
-              {{ post.content }}
+          <li>
+            <a href="{{ post.link}}">{{ post.title }}</a>
+              <p>{{ post.content }}</p>
               <a href="{{ post.url }}">View Permalink</a>
-            </dd>
+            </li>
          {% endfor %}
-        </dl>
+          </ul>
   </section>
 
 
