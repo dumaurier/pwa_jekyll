@@ -1,0 +1,28 @@
+---
+title: Jekyll + PWA + IndieWeb - Posts
+all: true
+page_only: true
+layout: default
+permalink: "/posts/"
+pagestyle: home.css
+pagejs: home.js
+---
+
+<h1 class="heading">Posts</h1>
+<p class="heading-sub">
+    All of the posts.
+</p>
+
+
+<section class="block feed-block">
+<h2>Blog</h2>
+  <ul class="posts-list">
+    {% for post in site.categories.blog %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
+      <p>{{ post.abstract }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+

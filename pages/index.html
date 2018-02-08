@@ -1,29 +1,82 @@
 ---
-title: Page
+title: Jekyll + PWA + IndieWeb
+all: true
+page_only: true
+layout: default
 permalink: "/"
 pagestyle: home.css
 pagejs: home.js
-layout: standard
 ---
 
-<main id="main" class="home" tabindex="0">
- <section class="block">
-  <h1>Jekyll PWA Starter</h1>
-  <p>
-   A simple Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll PWA Stater on GitHub.</a>
-  </p>
- </section>
-  <section class="block">
-   <ul class="posts-list">
-       {% for post in site.posts %}
-       <li>
-         <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
-         <p>
-           {{ post.abstract }}
-         </p>
-       </li>
+<h1 class="heading">Jekyll + PWA + IndieWeb Starter</h1>
+<p class="heading-sub">
+    A Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll + PWA + IndieWeb Stater on GitHub.</a>
+</p>
 
+<section class="block indie-intro">
+  
+  <h2>Own your content</h2>
+
+	<p>
+	This is a boilerplate project to start writing with Jekyll. It can be published with your own host or directly on GitHub. You can also use other free hosting services like Netlify, CloudFlare or CloudCannon.
+  </p>
+  
+	<p>
+	This Jekyll boilerplate includes:
+	<ul>
+	  <li>Critical CSS</li>
+	  <li>Service Worker</li>
+	  <li>Web App manifest</li>
+	  <li>RSS feed</li>
+	  <li>IndieWeb microformats</li>
+    <li>Webmentions</li>  
+  </ul>
+  
+	</p>
+ </section>
+
+  <section class="block feed-block">
+    <h2>Blog</h2>
+      <ul class="posts-list">
+        {% for post in site.categories.blog %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
+          <p>{{ post.abstract }}</p>
+        </li>
        {% endfor %}
-   </ul>
+      </ul>
+      <h2>Notes</h2>
+        <ul class="posts-list">
+          {% for post in site.categories.note %}
+          <li>
+            <p>
+              {{ post.abstract }}
+            </p>
+            <a href="{{ post.url }}">Read full note &raquo; </a>
+          </li>
+         {% endfor %}
+        </ul>
+        <h2>Links</h2>
+        <ul class="links-list">
+          {% for post in site.categories.link %}
+          <li>
+            <a href="{{ post.link}}">{{ post.title }}</a>
+              <p>{{ post.content }}</p>
+              <a href="{{ post.url }}">View Permalink</a>
+            </li>
+         {% endfor %}
+          </ul>
   </section>
-</main>
+
+
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

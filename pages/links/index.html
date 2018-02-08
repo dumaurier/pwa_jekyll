@@ -1,0 +1,29 @@
+---
+title: Jekyll + PWA + IndieWeb - Notes
+all: true
+page_only: true
+layout: default
+permalink: "/links/"
+pagestyle: home.css
+pagejs: home.js
+---
+
+<h1 class="heading">Posts</h1>
+<p class="heading-sub">
+    All of the links.
+</p>
+
+
+<section class="block feed-block">
+    <h2>Links</h2>
+    <dl class="links-list">
+      {% for post in site.categories.link %}
+      <dt><a href="{{ post.link}}">{{ post.title }}</a></dt>
+        <dd>
+          {{ post.content }}
+          <a href="{{ post.url }}">View Permalink</a>
+        </dd>
+     {% endfor %}
+    </dl>
+</section>
+

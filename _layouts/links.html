@@ -4,14 +4,16 @@ layout: standard
 
 <article class="post h-entry">
   <header>
-    <h1 class="p-name">{{ page.title }}</h1>
-    <p>Published by <a class="p-author h-card" href="https://joshvogt.co">{{ page.author }}</a>
+    <h1 class="p-name">
+        <a href="{{ page.link }}">{{ page.title }}</a>
+    </h1>
+    <p>Linked added by <a class="p-author h-card" href="https://joshvogt.co">{{ page.author }}</a>
      on <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
-     <p class="p-summary"><em>{{ page.abstract }}</em></p>
      <p>
        <a class="u-url" href="{{ site.domainname }}{{ page.url }}">Permalink</a>
      </p>
   </header>
+  
   <div class="e-content post-container">
     {{ content }}
   </div>

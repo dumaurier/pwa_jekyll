@@ -1,0 +1,30 @@
+---
+title: Jekyll + PWA + IndieWeb - Notes
+all: true
+page_only: true
+layout: default
+permalink: "/notes/"
+pagestyle: home.css
+pagejs: home.js
+---
+
+<h1 class="heading">Posts</h1>
+<p class="heading-sub">
+    All of the notes.
+</p>
+
+
+<section class="block feed-block">
+<h2>Blog</h2>
+<ul class="posts-list">
+    {% for post in site.categories.note %}
+    <li>
+      <p>
+        {{ post.abstract }}
+      </p>
+      <a href="{{ post.url }}">Read full note &raquo; </a>
+    </li>
+   {% endfor %}
+  </ul>
+</section>
+

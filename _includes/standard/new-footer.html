@@ -12,18 +12,19 @@
 
     {% assign about = site.data.about.me %}
     <p class="p-note footer-bio">
-      {{ about.bio }} &copy; {{ site.time | date: '%Y' }} {{ about.name }}
+      {{ about.bio }} 
     </p>
+    <small>&copy; {{ site.time | date: '%Y' }} {{ about.name }}. all mistakes are my own.</small>
   </div>
 
 
 </footer>
 
+
 {% if page.pagejs %}
  <script  src="{{ site.baseurl }}static-assets/js/{{ page.pagejs }}"></script>
 {% endif %}
 
-<script  src="{{ site.baseurl }}static-assets/js/JekyllWebmentionIO.js"></script>
 <script>
 // Ye Olde Service Worker----------------------------------------------
 (function() {
