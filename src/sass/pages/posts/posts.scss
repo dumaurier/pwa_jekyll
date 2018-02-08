@@ -23,14 +23,22 @@
   margin: 0;
   padding: 0;
 
-  li:nth-of-type(odd){
-    background: $grey-ghost;
-    padding: 1rem;
+  li{
+    border-left: 4px solid $color-yellow-pale;
   }
 
-  a{
-    display: inline-block;
-    margin: 1rem 0;
+  li:nth-of-type(odd){
+    background: $grey-ghost;
+  }
+}
+
+.mention-item{
+  padding: .5rem 0;
+
+
+  cite{
+    display: inherit;
+    margin: .8125rem .4rem;
   }
 }
 

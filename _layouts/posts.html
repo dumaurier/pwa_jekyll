@@ -5,14 +5,12 @@ layout: standard
 <article class="post h-entry">
   <header>
     <h1 class="p-name">{{ page.title }}</h1>
-    <p class="p-summary"><em>{{ page.abstract }}</em></p>
     <p>Published by <a class="p-author h-card" href="https://joshvogt.co">{{ page.author }}</a>
      on <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
+     <p class="p-summary"><em>{{ page.abstract }}</em></p>
      <p>
-        <a class="u-url" href="{{ site.domainname }}{{ page.url }}">Permalink</a>
-      </p>
-     
-     
+       <a class="u-url" href="{{ site.domainname }}{{ page.url }}">Permalink</a>
+     </p>
   </header>
   <div class="e-content post-container">
     {{ content }}
@@ -46,9 +44,12 @@ layout: standard
 
 <template id="mention-tmpl">
   <li>
-    <div class="mention-item">
-      <p class="mention-author"></p>
-      <a class="mention-link" href=""></a>
+    <blockquote class="mention-item">
+      <div class="mention-reply-content"></div>
+      <cite>
+        <span class="mention-reply-author"></span>
+        <a class="mention-reply-link"></a>
+      </cite>
     </div>
   </li>
 </template>
@@ -69,9 +70,10 @@ layout: standard
       data.links.forEach(function(mention){
         var tmpl = document.getElementById('mention-tmpl').content.cloneNode(true);
 
-        tmpl.querySelector('.mention-author').innerText = mention.activity.sentence;
-        tmpl.querySelector('.mention-link').innerText = mention.data.author.name;
-        tmpl.querySelector('.mention-link').setAttribute('href',mention.data.author.url);
+        tmpl.querySelector('.mention-reply-content').innerHTML = mention.data.content;
+        tmpl.querySelector('.mention-reply-author').innerText = mention.data.author.name;
+        tmpl.querySelector('.mention-reply-link').setAttribute('href',mention.source);
+        tmpl.querySelector('.mention-reply-link').innerText = mention.data.author.url;
         document.getElementById('webmentions-container').appendChild(tmpl);
       });
     }
