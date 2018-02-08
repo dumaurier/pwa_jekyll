@@ -13,6 +13,11 @@
  li + li{
   margin-top: 0;
  }
+
+ a{
+   color: $grey;
+   text-decoration-color: $color-orange;
+ }
 }
 
 .footer-bio{
