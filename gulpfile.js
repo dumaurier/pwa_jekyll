@@ -48,7 +48,7 @@ gulp.task('jekyll-rebuild', ['jekyll-watch'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-watch', 'sass-fast', 'scripts', 'page-scripts', 'home-scripts', 'critical',], function() {
+gulp.task('browser-sync', ['jekyll-watch', 'sass-fast', 'scripts', 'page-scripts', 'critical',], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -65,9 +65,7 @@ gulp.task('browser-sync', ['jekyll-watch', 'sass-fast', 'scripts', 'page-scripts
    return gulp.src([
      'src/js/vendor/fetch.js',
      'src/js/vendor/es6-promise.min.js',
-     'src/js/objects/**/*.js',
-     'src/js/vendor/TweenMax.min.js',
-     'src/js/vendor/MorphSVGPlugin.min.js'
+     'src/js/objects/**/*.js'
    ])
    .pipe(concat('bundle.js'))
    .pipe(uglify())
@@ -88,20 +86,7 @@ gulp.task('browser-sync', ['jekyll-watch', 'sass-fast', 'scripts', 'page-scripts
    .pipe(gulp.dest('static-assets/js'));
  });
 
- /**
-  * PWA JS
-  */
 
-  gulp.task('home-scripts', function(){
-    return gulp.src([
-
-    ])
-    .pipe(uglify())
-    .pipe(concat('new-home.js'))
-
-   //  .pipe(gulp.dest('static-assets/js'));
-    .pipe(gulp.dest('static-assets/js'));
-  });
 
 
 /**
@@ -167,7 +152,7 @@ gulp.task('prod-assets', ['prod-assets-css', 'prod-assets-js']);
 //Watch Tasks
 gulp.task('watch', function () {
     gulp.watch('src/**/*.scss', ['sass-fast', 'critical']);
-    gulp.watch('src/js/**/*.js', ['scripts', 'page-scripts', 'home-scripts']);
+    gulp.watch('src/js/**/*.js', ['scripts', 'page-scripts']);
     gulp.watch(['*.html','pages/**/*.html','src/js/**/*.js', 'src/sass/**/*.scss', '_layouts/*.html', '_includes/*.html', 'service-worker.js'], ['jekyll-rebuild']);
 });
 
@@ -175,10 +160,10 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['scripts', 'page-scripts', 'home-scripts', 'critical', 'sass-fast', 'browser-sync', 'watch']);
+gulp.task('default', ['scripts', 'page-scripts', 'critical', 'sass-fast', 'browser-sync', 'watch']);
 
 /**
  * Gulp task for new homepage
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('new-home', ['home-scripts', 'critical', 'sass-fast', 'browser-sync', 'watch']);
+gulp.task('new-home', ['critical', 'sass-fast', 'browser-sync', 'watch']);
