@@ -118,58 +118,6 @@ The service worker will also create a runtime cache when visitors to your site v
 ### BrowserSync
 Running the site using the default `gulp` task will use BrowserSync. It's a fair bit slower on Windows when compared to a Mac.
 
-### Jekyll Admin
-The [Jekyll Admin](https://github.com/jekyll/jekyll-admin) gem is included. The Jekyll admin GUI can be accessed from `localhost:3000/admin' when using `gulp` and 'localhost:4000/admin` when building the site using `jekyll serve`.
-
-Default front matter for pages and posts can be configured in the `_config.yml` file. This will be visible in the admin UI when creating/editing pages or posts.
-
-This is the defaults section from the `_config.yml` file:
-
-```
-# front matter defaults for pages and posts. These fields are also available for editing in the Jekyll Admin GUI. This is available at localhost:4000/admin
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      all: true
-  - scope:
-      path: ''
-      type: pages
-    values:
-      page_only: true
-      layout: standard
-  - scope:
-      path: ''
-      type: posts
-    values:
-      layout: posts
-      abstract: short desciption of your post.
-      author: Josh Vogt
-```
-The site will need to be rebuilt if changes to the `_config.yml` are made before they will be available in the Admin UI.
-
-### Internationalization Plugin
-The [Jekyll Language Plugin](https://github.com/vwochnik/jekyll-language-plugin) is available but not configured on any of the existing pages. To add multi-lingual support add the desired language to the `_config.yml` file:
-
-```
-languages: ['en', 'fr']
-language_data: data.i18n.lang.%%
-language_includes_dir: _i18n
-```
-
-In the front matter of your page or post add the languages the page should support:
-
-```
-languages:
-- en
-- fr
-subset: home
-```
-
-Translations should be added to the `lang.yml` file located at `_data/i18n/`. More information on the `jekyll-language-plugin` is availble on the repo's [Wiki](https://github.com/vwochnik/jekyll-language-plugin/wiki).
-
-
 
 ## Application Requirements
 ***Note:*** If you run the site through Netlify and use Netlify CMS you don't need a darn thing.
