@@ -21,8 +21,6 @@ exclude:
 - Dockerfile
 - docker-entrypoint.sh
 port: 4000
-plugins_dir:
-- jekyll-language-plugin
 sass:
   style: :compressed
 
@@ -47,6 +45,3 @@ defaults:
       abstract: short desciption of your post.
       author: Josh Vogt
 
-languages: ['en', 'fr']
-language_data: data.i18n.lang.%%
-language_includes_dir: _i18n
