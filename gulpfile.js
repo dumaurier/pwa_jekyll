@@ -3,9 +3,9 @@ const browserSync = require('browser-sync');
 const sass        = require('gulp-sass');
 const prefix      = require('gulp-autoprefixer');
 const cp          = require('child_process');
-const run          = require('gulp-run');
+const run         = require('gulp-run');
 const concat      = require('gulp-concat');
-const uglify      = require('gulp-uglify');
+const uglify      = require('gulp-uglify-es').default;
 const htmlmin     = require('gulp-htmlmin');
 const rev         = require('gulp-rev');
 
@@ -77,14 +77,12 @@ gulp.task('browser-sync', ['jekyll-watch', 'sass-fast', 'scripts', 'page-scripts
  * Page Specific JS
  */
 
- gulp.task('page-scripts', function(){
-   return gulp.src([
-     'src/js/page/**/*.js'
-   ])
-   .pipe(uglify())
-  //  .pipe(gulp.dest('static-assets/js'));
-   .pipe(gulp.dest('static-assets/js'));
- });
+
+ gulp.task("page-scripts", function () {
+    return gulp.src("src/js/page/**/*.js")
+        .pipe(uglify(/* options */))
+        .pipe(gulp.dest('static-assets/js'));
+});
 
 
 

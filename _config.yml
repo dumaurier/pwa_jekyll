@@ -21,6 +21,8 @@ exclude:
 - Dockerfile
 - docker-entrypoint.sh
 port: 4000
+plugins:
+  - liquid-md5
 sass:
   style: :compressed
 

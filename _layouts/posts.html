@@ -54,29 +54,7 @@ layout: standard
   </li>
 </template>
 
-<script async>
-  const page = "{{ site.domainname}}{{ page.url }}";
-  const webmention = "https://webmention.io/api/mentions?target=";
-  const request = webmention + page;
+<script async src="{{ site.baseurl }}static-assets/js/posts.js"></script>
 
-  fetch(request)
-  .then(response => response.json())
-  .then(data => {
-    if(data.links.length == 0){
-      console.log('no mentions yet');
-    }
-    else{
-      document.querySelector('.post-webmentions').removeAttribute('hidden');
-      data.links.forEach(function(mention){
-        var tmpl = document.getElementById('mention-tmpl').content.cloneNode(true);
-
-        tmpl.querySelector('.mention-reply-content').innerHTML = mention.data.content;
-        tmpl.querySelector('.mention-reply-author').innerText = mention.data.author.name;
-        tmpl.querySelector('.mention-reply-link').setAttribute('href',mention.source);
-        tmpl.querySelector('.mention-reply-link').innerText = mention.data.author.url;
-        document.getElementById('webmentions-container').appendChild(tmpl);
-      });
-    }
-    console.log(data)
-  });
-</script>
+<input id="page-path" type="hidden" value="{{ site.domainname}}{{ page.url }}" />
+<input id="page-id" type="hidden" value="{{ page.id | md5 }}" /> 
