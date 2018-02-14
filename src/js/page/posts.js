@@ -10,8 +10,8 @@ var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedD
 
 JekyllPWA.Posts = {
     init: function () {
-        this.initCheckForStoredMentions();
         this.initCreateMentionsStore();
+        this.initCheckForStoredMentions();
         this.initDisplayMentions();
         this.initConnectCheck();
     },
