@@ -11,11 +11,11 @@ var getPageURL = location;
 var filesToCache = [
  '/manifest.json',
  '/static-assets/js/home.js',
+ 'static-assets/js/posts.js',
  '/static-assets/css/new-base.css',
  '/',
  '404.html'
 ];
-
 
 self.addEventListener('install', function(e) {
     e.waitUntil(
@@ -49,11 +49,9 @@ self.addEventListener('activate', function(e) {
     return self.clients.claim();
 });
 
-
-
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
-  if (event.request.url.startsWith(self.location.origin) && !event.request.url.endsWith('.js') && !event.request.url.startsWith(self.location.origin + '/.netlify/')) {
+  if (event.request.url.startsWith(self.location.origin) && !event.request.url.startsWith(self.location.origin + '/.netlify/')) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {

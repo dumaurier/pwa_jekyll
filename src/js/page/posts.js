@@ -8,13 +8,19 @@ const pageID = document.getElementById('page-id').value; //md5 hash of {{ page.i
 const request = webmention + page;
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
-
-
 JekyllPWA.Posts = {
     init: function () {
+        this.initCheckForStoredMentions();
         this.initCreateMentionsStore();
-        //this.initCheckForStoredMentions();
         this.initDisplayMentions();
+        this.initConnectCheck();
+    },
+
+    initConnectCheck: function() {
+        // A very simple check to see if is online. If this returns false, the mentions will be populated strictly from IDB.
+        if(!navigator.onLine) {
+            JekyllPWA.Posts.initCheckForStoredMentions();
+        }
     },
 
     initCreateMentionsStore: function() {
@@ -41,14 +47,37 @@ JekyllPWA.Posts = {
             var objectStoreRequest = objectStore.getAll();
 
             objectStoreRequest.onsuccess = function(event) {
-                var mentionsOffline = objectStoreRequest.result;
+                var mentionsIDB = objectStoreRequest.result;
+
+                var checkMentions = new Promise(function(resolve, reject) {
                 
-                if (mentionsOffline.length >= mentions.length) {
+                    if(mentionsIDB.length > mentions.length) {
+                        resolve('Success!');
+                    }
+                    else {
+                        reject('Failure!');
+                    }
+                });
+                
+                checkMentions.then(function() { 
                     mentions = [];
-                    mentionsOffline.forEach(function(mention) {
+                    mentionsIDB.forEach(function(mention) {
                         mentions.push({id: mention.id, source: mention.source, target: mention.target, content: mention.content, author: mention.author, url: mention.url, fromID: "yeah"});
                     });
-                }
+                }).then(function(){
+                    document.querySelector('.post-webmentions').removeAttribute('hidden');
+                    mentions.forEach(mention => {
+
+                        var tmpl = document.getElementById('mention-tmpl').content.cloneNode(true);
+                        tmpl.querySelector('.mention-reply-content').innerHTML = mention.content;
+                        tmpl.querySelector('.mention-reply-author').innerText = mention.author;
+                        tmpl.querySelector('.mention-reply-link').setAttribute('href',mention.source);
+                        tmpl.querySelector('.mention-reply-link').innerText = mention.url;
+                        document.getElementById('webmentions-container').appendChild(tmpl);
+                    });
+                }).catch(function() {
+                    console.error();
+                })
             };
         };
     },
@@ -57,8 +86,8 @@ JekyllPWA.Posts = {
         fetch(request)
         .then(response => response.json())
         .then(data => {
-            if(data.links.length == 0){
-                console.log('no mentions yet');
+            if(data.links.length <= mentions.length){
+                console.log('IndexedDB Wins! Enjoy!');
             }
             else{
                 //show the mentions container
