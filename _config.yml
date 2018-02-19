@@ -1,10 +1,10 @@
 ---
-title: Josh Vogt - Web Developer
+title: Jekyll PWA Starter
 timezone: UTC
 destination: _site/
-domainname: https://joshvogt.co
+domainname: https://pwa-jekyll-starter.netlify.com
 baseurl: /
-sitename: Josh Vogt
+sitename: My Website
 assetsurl: /static-assets/
 markdown: kramdown
 highlighter: rouge
@@ -46,3 +46,4 @@ defaults:
       layout: posts
       abstract: short desciption of your post.
       author: Josh Vogt
+

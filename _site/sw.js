@@ -1,11 +1,11 @@
-const cacheName = 'sw-1519008917';
-const dataCacheName = 'sw-1519008917';
+const cacheName = 'sw-1519009464';
+const dataCacheName = 'sw-1519009464';
 const RUNTIME = 'runtime';
 
 var getPageURL = location;
 
 var filesToCache = [
- '/manifest.webmanifest',
+ '/manifest.json',
  '/static-assets/js/home.js',
  'static-assets/js/posts.js',
  '/static-assets/css/new-base.css',

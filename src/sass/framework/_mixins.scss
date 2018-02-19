@@ -7,47 +7,9 @@ $font-fast: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, san
 //for example, h1{@include font-size(3.6);} will produce font-size:36px; and font-size:3.6rem;.
 //Older browsers that don't support REM will default to the pixel value
 
-@mixin mono-font {
-  font-family: "source-code-pro", monospace;
-}
-
-@mixin sans-font( $style ){
-  font-family: "tablet-gothic", sans-serif;
-  @if $style == "italic"{font-style: italic;}
-  @else if $style == "bold"{font-weight: 600; font-style: normal;}
-  @else if $style == "heavy"{font-weight: 900; font-style: normal;}
-  @else if $style == "body"{font-weight: 400; font-style: normal;}
-  @else {font-weight: 400; font-style: normal;}
-}
-
 @mixin font-size($sizeValue: 1) {
     font-size: ($sizeValue * 16) + px;
     font-size: $sizeValue + rem;
-}
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
 }
 
 @mixin transition($args...) {
@@ -59,14 +21,16 @@ $font-fast: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, san
 }
 
 @mixin default-transition {
-    @include transition(all 0.25s ease); //adding a transition to all animatable elements is likely to cause jank and drop FPS
+    transition: all 0.25s ease; //adding a transition to all animatable elements is likely to cause jank and drop FPS
 }
 
 
 @mixin vertical-center{
     position: relative;
     top: 50%;
-    @include transform(translateY(-50%));
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 @mixin zed ($z) {

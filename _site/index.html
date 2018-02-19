@@ -18,7 +18,7 @@
   <meta name="description" content="Site description" />
   <meta name="robots" content="index, follow"  />
   <link rel="canonical" href="https://joshvogt.co" />
-  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0073bd">
   <link rel="apple-touch-icon" sizes="180x180" href="/static-assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static-assets/images/icon-32x32.png">
@@ -26,19 +26,19 @@
   <link rel="mask-icon" href="static-assets/images/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="icon" href="favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="Josh Vogt RSS" href="/feed.xml">
-  <title>Josh Vogt - Web Developer</title>
+  <title>Jekyll + PWA + IndieWeb</title>
 
 
   <!-- Meta tags for social media -->
   <meta property="og:locale" content="en" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Josh Vogt - Web Developer"  />
+  <meta property="og:title" content="Jekyll + PWA + IndieWeb"  />
   <meta property="og:url" content="https://joshvogt.co/"  />
   <meta property="og:site_name" content="Josh Vogt - Web Developer"  />
   <meta property="og:image" content="static-assets/images/icon-512x512.png" />
   <meta property="og:description" content="Site description"  />
   <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Josh Vogt - Web Developer" />
+  <meta property="twitter:title" content="Jekyll + PWA + IndieWeb" />
   <meta property="twitter:image" content="https://joshvogt.co//static-assets/images/icon-512x512.png" />
   <meta property="twitter:site" content="@jshvgt"  />
   <meta property="twitter:creator" content="@jshvgt"  />
@@ -54,7 +54,7 @@
   
 
   <style>
-  *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;-webkit-text-decoration-style:double;-moz-text-decoration-style:double;text-decoration-style:double;text-decoration-color:#93caeb}a:focus,a:hover{text-decoration:inherit;outline:1px dashed #cf4829;background:#fdf9d8}img{max-width:100%}.highlighter-rouge{margin-top:1rem}.highlight{padding:.5rem;line-height:1.6;background:#0073BD;color:#fff;font-size:16px;font-size:1rem;overflow:auto;margin:10px}.disabled-link{cursor:not-allowed;color:#f7fafb}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f7fafb;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}.global-footer{min-height:130px;padding:.5rem}.indieweb-social{list-style:none;margin:0;padding:20px;display:grid;grid-template-columns:repeat(auto-fill, minmax(100px, 1fr))}.indieweb-social li+li{margin-top:0}.indieweb-social a{color:#525967;text-decoration-color:#cf4829}.footer-bio{max-width:460px;padding:20px}.header-container{-ms-flex:0 0 auto;flex:0 0 auto;height:60px;width:100vw;border-bottom:0.15rem solid #525967;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:0 10px}.header-container h1{font-size:17.6px;font-size:1.1rem;font-weight:600}.header-container .home-link{display:inline-block;white-space:nowrap;line-height:60px;height:100%}.header-container .site-logo{width:55px;float:left;margin-right:.5rem}.header-container .header-links{margin:0}.header-container .header-links a{padding:0 5px;text-decoration-color:#850057;color:#0073BD}@media screen and (min-width: 30rem){.header-links{margin:0 3rem}}
+  *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;-webkit-text-decoration-style:double;-moz-text-decoration-style:double;text-decoration-style:double;text-decoration-color:#93caeb}a:focus,a:hover{text-decoration:inherit;outline:1px dashed #cf4829;background:#fdf9d8}img{max-width:100%}.highlighter-rouge{margin-top:1rem}.highlight{padding:.5rem;line-height:1.6;background:#0073BD;color:#fff;font-size:16px;font-size:1rem;overflow:auto}.disabled-link{cursor:not-allowed;color:#f7fafb}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f7fafb;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}.global-footer{min-height:130px;padding:.5rem}.indieweb-social{list-style:none;margin:0;padding:20px;display:grid;grid-template-columns:repeat(auto-fill, minmax(100px, 1fr))}.indieweb-social li+li{margin-top:0}.indieweb-social a{color:#525967;text-decoration-color:#cf4829}.footer-bio{max-width:460px;padding:20px}.header-container{-ms-flex:0 0 60px;flex:0 0 60px;width:100vw;border-bottom:0.15rem solid #525967;height:3.5rem;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between}.header-container h1{margin:0 0 0 20px;font-size:14px;font-size:.875rem;font-weight:600}.header-container .home-link{display:inline-block;white-space:nowrap;line-height:60px;height:100%}.header-container .site-logo{width:55px;float:left;margin-right:.5rem}.header-container .header-links{margin:0}.header-container .header-links a{padding:0 5px;text-decoration-color:#850057;color:#25282e}@media screen and (min-width: 30rem){.header-links{margin:0 3rem}}
 
     .home{display:grid;grid-template-columns:repeat(8, 1fr);padding:1rem}.heading{font-size:20.8px;font-size:1.3rem;grid-column:1 / -1}.heading-sub{grid-column:2 / -1}.indie-intro{grid-column:1 / -1}.feed-block{grid-column:1 / -1}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:1.3rem}@media screen and (min-width: 30rem){.home{display:grid;grid-template-columns:repeat(16, 1fr)}.heading{font-size:35.2px;font-size:2.2rem;grid-column:4 / 12}.heading-sub{grid-column:5 / 13;grid-row:2}.indie-intro{grid-column:1 / 6}.feed-block{grid-column:7 / -1}}
 
@@ -69,16 +69,6 @@
 
  
  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
- <script>
-(function(d) {
-  var config = {
-    kitId: 'veg4nzj',
-    scriptTimeout: 3000,
-    async: true
-  },
-  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-})(document);
-</script>
 </head>
 
 
@@ -86,6 +76,7 @@
     <header class="header-container">
   <h1>
     <a class="home-link" href="/">
+        <img class="site-logo" src="/static-assets/images/icon-192x192.png" alt="logo for Josh Vogt" />
     Josh Vogt
     </a>
 </h1>
@@ -99,38 +90,30 @@
 
 
     <main id="main" class="home" tabindex="0">
-      <section class="block indie-intro">
-  <h1 class="heading">Josh Vogt.</h1>
-	<p>
-	I'm a Toronto based web developer with over 10 years of experience. I focus on:
-  </p>
-	<ul>
-	  <li>
-      <strong>Accessibility</strong>
-      <p>
-        I am very familiar with WCAG 2.1, WAI-ARIA and building sites that comply with AODA.
-      </p>
-    </li>
-    <li>
-      <strong>Performance</strong>
-      <p>
-        Choosing the right tool and technique for can help improve site performance without impacting developer convenience.
-      </p>
-    </li>
-    <li>
-      <strong>CSS</strong>
-      <p>
-        Modern CSS features like CSS Grid Layout, CSS Custom Properties and feature queries make CSS easier to write and maintain.
-      </p>
-    </li>
-	  <li>
-      <strong>Progressive Web Apps.</strong>
-      <p>
-        Service Workers, Web Manifests and the Cache API make sites network resiliant and compete with native apps for features and engagement.
-      </p>
-    </li>
-  </ul>
+      <h1 class="heading">Jekyll + PWA + IndieWeb Starter</h1>
+<p class="heading-sub">
+    A Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll + PWA + IndieWeb Stater on GitHub.</a>
+</p>
 
+<section class="block indie-intro">
+  
+  <h2>Own your content</h2>
+ 
+	<p>
+	This is a boilerplate project to start writing with Jekyll. It can be published with your own host or directly on GitHub. You can also use other free hosting services like Netlify, CloudFlare or CloudCannon.
+  </p>
+  
+	<p>
+	This Jekyll boilerplate includes: 
+	<ul>
+	  <li>Critical CSS</li>
+	  <li>Service Worker</li>
+	  <li>Web App manifest</li>
+	  <li>RSS feed</li>
+	  <li>IndieWeb microformats</li>
+    <li>Webmentions</li>  
+  </ul>
+  
 	</p>
  </section>
 
@@ -139,54 +122,40 @@
       <ul class="posts-list">
         
         <li>
-          <a href="/blog/webmentions-are-weird/">Webmentions are nuts - January 29, 2018</a>
-          <p>Trying to figure out webmentions</p>
+          <a href="/posts/blog/this-is-a-test/">This is a test - January 05, 2018</a>
+          <p>This post is a demonstration of indieweb blogging.</p>
         </li>
        
         <li>
-          <a href="/blog/okay-webmentions/">Webmention is still weird - January 22, 2018</a>
-          <p>This is strange and frustrating</p>
-        </li>
-       
-        <li>
-          <a href="/blog/jekyll-pwa-starter/">Jekyll PWA Starter - early version - January 06, 2018</a>
-          <p>I've started working on a Jekyll PWA starter. It's early but it works well. Update Jan 8, 2018 - I corrected the PWA errors. Everything is nice.</p>
-        </li>
-       
-        <li>
-          <a href="/blog/front-end-links-may200/">Front End Links - May 13-20, 2017 - May 12, 2017</a>
-          <p>A list of links that I don't want to forge about for May 13 to May 20, 2017</p>
-        </li>
-       
-        <li>
-          <a href="/blog/css-grid-layout-off-canvas-navigation/">CSS Grid Layout: Off-canvas Navigation - May 02, 2017</a>
-          <p>How to create a responsive layout with off-canvas navigation using CSS Grid Layout. Also covers accessibility and hot dogs.</p>
-        </li>
-       
-        <li>
-          <a href="/blog/css-grid-layout-and-absolute-positioning/">CSS Grid Layout and Absolute Positioning - April 26, 2017</a>
-          <p>A quick explanation of absolute positioning and CSS Grid Layout. How do offset properties work with CSS Grid? How does it impact the placement of other grid items?</p>
-        </li>
-       
-        <li>
-          <a href="/blog/layout-differences-between-css-grid-layout-and-multi-column/">Layout Differences Between CSS Grid Layout and Multi-Column Layout - April 18, 2017</a>
-          <p>A rundown of the obvious and no so obvious differences between CSS Grid layout and Multi-Column layout.</p>
-        </li>
-       
-        <li>
-          <a href="/blog/css-grid-layout-grid-template-areas/">CSS Grid Layout - Understanding Grid Template Areas - April 02, 2017</a>
-          <p>An introduciton on the basics of grid-template-areas in CSS Grid layout. It's one the most powerful features in the spec.</p>
-        </li>
-       
-        <li>
-          <a href="/blog/critical-path-jekyll/">Critical Path CSS and Jekyll - March 11, 2017</a>
-          <p>Four different ways to inline critical CSS on Jekyll sites.</p>
+          <a href="/posts/blog/test-one/">Welcome to Jekyll! - November 17, 2015</a>
+          <p>short desciption of your post.</p>
         </li>
        
       </ul>
       <h2>Notes</h2>
         <ul class="posts-list">
           
+          <li>
+            <p>
+              Webmention test-o-matic
+            </p>
+            <a href="/posts/note/webmentions-for-a-friend/">Read full note &raquo; </a>
+          </li>
+         
+          <li>
+            <p>
+              The Lighthouse score for this project is...really good. 
+            </p>
+            <a href="/posts/note/this-projects-lighthouse-score/">Read full note &raquo; </a>
+          </li>
+         
+          <li>
+            <p>
+              a thing
+            </p>
+            <a href="/posts/note/things/">Read full note &raquo; </a>
+          </li>
+         
         </ul>
         <h2>Links</h2>
         <ul class="links-list">
@@ -260,7 +229,13 @@
        </li>
      
        <li>
-         <a href="https://joshvogt.co/" rel="me" class="u-url">
+         <a href="sms:+14169671111" rel="me" class="u-tel">
+           sms
+         </a>
+       </li>
+     
+       <li>
+         <a href="https://pwa-jekyll-starter.netlify.com/" rel="me" class="u-url">
            my site
          </a>
        </li>
@@ -269,7 +244,7 @@
 
     
     <p class="p-note footer-bio">
-      Front-end developer. Focused on performance, accessibility and standards. 
+      This is a bio for use with microformats h-card. This helps other machines understand your content for IndieWeb publishing. 
     </p>
     <small>&copy; 2018 Josh Vogt. all mistakes are my own.</small>
   </div>
