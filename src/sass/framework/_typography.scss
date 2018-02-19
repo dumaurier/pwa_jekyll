@@ -1,61 +1,90 @@
+$baseline: 1.5rem;
+
+$minScreen: 20rem;
+$maxScreen: 50rem;
+$minFont: .8rem;
+$maxFont: 2rem;
+
+$h1: 1.75rem;
+$h2: 1.5rem;
+$h3: 1.25rem;
+$h4: 1rem;
+$h5: .875rem;
+
 
 //Base styles for headers, paragraphs, and inline quotations.
+h1,h2,h3,h4,h5,h6{
+  @include sans-font(bold);
+  margin: 0;
+
+  code{
+    font-size: inherit;
+  }
+}
 
 h1 {
-    @include font-size(3);
+	font-size: $h1;
+	line-height: $h1;
+	margin-top: calc((#{$baseline} - #{$h1}) + #{$baseline});
 }
 
 h2 {
-    @include font-size(2);
+	font-size: $h2;
+	line-height: $h2;
+	margin-top: calc((#{$baseline} - #{$h2}) + #{$baseline}*2);
 }
 
 h3 {
-    @include font-size(1.75);
+	font-size: $h3;
+	line-height: $h3;
+	margin-top: calc((#{$baseline} - #{$h3}) + #{$baseline}*2);
 }
 
 h4 {
-    @include font-size(1.375);
+	font-size: $h4;
+	line-height: $h4;
+	margin-top: calc((#{$baseline} - #{$h4}) + #{$baseline}*2);
 }
 
 h5 {
-    @include font-size(1.15);
+	font-size: $h5;
+	line-height: $h5;
+	margin-top: calc((#{$baseline} - #{$h5}) + #{$baseline}*2);
 }
 
-h6 {
-    @include font-size(1);
+header:not(.header):first-of-type h1{
+  margin-bottom: calc((#{$baseline} - #{$h1}) + #{$baseline});
 }
 
 p {
-    @include font-size(1);
+    line-height: 1.6;
     text-align: left;
-    margin: 0;
-    line-height: 1.4;
 
-    + p{
-     margin-top: 1rem;
+		> q{
+			font-style:italic;
+			quotes: "\201C" "\201D" "\2018" "\2019";
+
+			&:before { content: open-quote; }
+			&:after { content: close-quote; }
+		}
+
+		> q:lang(fr){
+			font-style:italic;
+			quotes: "\00AB" "\00BB" "\201C" "\201D";
+
+			&:before { content: open-quote; }
+			&:after { content: close-quote; }
+		}
     }
-}
-
-q{
-  font-style:italic;
-  quotes: "\201C" "\201D" "\2018" "\2019";
-
-  &:before { content: open-quote; }
-  &:after { content: close-quote; }
-}
-
-q:lang(fr){
-  font-style:italic;
-  quotes: "\00AB" "\00BB" "\201C" "\201D";
-
-  &:before { content: open-quote; }
-  &:after { content: close-quote; }
-}
 
 //Text-level semantic styles
  code, pre {
-    font-family: "Courier New", Courier, Monospace;
+    @include mono-font;
     @include font-size(.875);
+}
+
+strong{
+  font-weight: 600;
 }
 
  dfn,

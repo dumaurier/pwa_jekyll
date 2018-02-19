@@ -1,20 +1,20 @@
 .header-container{
- flex: 0 0 60px;
+ flex: 0 0 auto;
+ height: 60px;
  width: 100vw;
  border-bottom: .15rem solid $grey;
- height: 3.5rem;
  display: flex;
  align-items: center;
  justify-content: space-between;
+ padding: 0 10px;
 
  h1{
-  margin: 0 0 0 20px;
-  @include font-size(0.875);
+  @include font-size(1.1);
   font-weight: 600;
  }
- 
+
 .home-link{
-    display: inline-block; 
+    display: inline-block;
     white-space: nowrap;
     line-height: 60px;
     height: 100%;
@@ -32,7 +32,7 @@
      a{
          padding: 0 5px;
          text-decoration-color: $color-purple;
-         color: $grey-dark;
+         color: $color-blue;;
      }
  }
 }

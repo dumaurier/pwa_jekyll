@@ -15,7 +15,7 @@
   <meta name="description" content="Site description" />
   <meta name="robots" content="index, follow"  />
   <link rel="canonical" href="{{ site.domainname }}" />
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#0073bd">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/static-assets/images/apple-touch-icon.png" | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}static-assets/images/icon-32x32.png">
@@ -80,4 +80,14 @@
     loadCSS("{{ site.baseurl }}static-assets/css/new-base-820ec1693e.css");
  </script>
  {% endif %}
+ <script>
+(function(d) {
+  var config = {
+    kitId: 'veg4nzj',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+</script>
 </head>

@@ -9,7 +9,7 @@ const RUNTIME = 'runtime';
 var getPageURL = location;
 
 var filesToCache = [
- '/manifest.json',
+ '/manifest.webmanifest',
  '/static-assets/js/home.js',
  'static-assets/js/posts.js',
  '/static-assets/css/new-base.css',

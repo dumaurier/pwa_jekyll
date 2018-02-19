@@ -1,9 +1,8 @@
 me:
   name: Josh Vogt
   bio: >-
-    This is a bio for use with microformats h-card. This helps other
-    machines understand your content for IndieWeb publishing.
-  webmention: pwa-jekyll-starter.netlify.com
+    Front-end developer. Focused on performance, accessibility and standards.
+  webmention: joshvogt.co
 social:
   - name: twitter
     url: 'https://twitter.com/jshvgt'
@@ -14,9 +13,6 @@ social:
   - name: email
     url: 'mailto:joshvogt@gmail.com'
     class: u-email
-  - name: sms
-    url: 'sms:+14169671111'
-    class: u-tel
   - name: my site
-    url: 'https://pwa-jekyll-starter.netlify.com/'
+    url: 'https://joshvogt.co/'
     class: u-url

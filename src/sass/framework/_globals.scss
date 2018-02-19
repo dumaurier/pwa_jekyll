@@ -80,6 +80,7 @@ img{
   color: $color-white;
   @include font-size(1);
   overflow: auto;
+  margin: 10px;
 }
 
 .disabled-link{
