@@ -9,4 +9,4 @@ permalink: '/posts/:categories/:title/'
 ---
 Testing webmentions implementation on cloned site. 
 
-<https://joshvogt.netlify.com/blog/webmentions-are-weird/>
+<http://joshvogt.netlify.com/blog/webmentions-are-weird/>
