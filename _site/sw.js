@@ -1,5 +1,5 @@
-const cacheName = 'sw-1519009464';
-const dataCacheName = 'sw-1519009464';
+const cacheName = 'sw-1532306375';
+const dataCacheName = 'sw-1532306375';
 const RUNTIME = 'runtime';
 
 var getPageURL = location;

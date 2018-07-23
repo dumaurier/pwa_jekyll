@@ -7,11 +7,11 @@ const webmention = "https://webmention.io/api/mentions?target=";
 const pageID = document.getElementById('page-id').value; //md5 hash of {{ page.id }} - needed for indexedDB Store
 const request = webmention + page;
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+var IDBname = "post" + pageID;
 
 JekyllPWA.Posts = {
     init: function () {
         this.initCreateMentionsStore();
-        this.initCheckForStoredMentions();
         this.initDisplayMentions();
         this.initConnectCheck();
     },
@@ -25,7 +25,8 @@ JekyllPWA.Posts = {
 
     initCreateMentionsStore: function() {
         // Create IndexedDB Store for each article. 
-        var open = indexedDB.open("Mentions", 1);
+        var open = indexedDB.open(IDBname, 1);
+
         // Create the schema
         open.onupgradeneeded = function() {
         let db = open.result;
@@ -37,10 +38,12 @@ JekyllPWA.Posts = {
     },
 
     initCheckForStoredMentions: function() {
-        var openStorage = window.indexedDB.open( "Mentions", 1 );
+        var openStorage = window.indexedDB.open( IDBname, 2 );
         
         openStorage.onsuccess = function(event){
             db = openStorage.result;
+
+            console.table(db);
 
             var transaction = db.transaction([ pageID ], "readwrite" );
             var objectStore = transaction.objectStore( pageID );
@@ -110,7 +113,7 @@ JekyllPWA.Posts = {
         .then(function(){
             mentions.forEach(function(el){
                 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
-                var openStorage = window.indexedDB.open("Mentions", 1);
+                var openStorage = window.indexedDB.open(IDBname, 1);
         
                 openStorage.onsuccess = function(event){
                     db = openStorage.result;
