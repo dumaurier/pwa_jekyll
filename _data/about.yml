@@ -1,22 +1,23 @@
+# This is the about file. If you want to use IndieWeb Microformats and Webmentions, fill this section out with your information.
 me:
-  name: Josh Vogt
+  name: --Your Name--
   bio: >-
     This is a bio for use with microformats h-card. This helps other
     machines understand your content for IndieWeb publishing.
   webmention: pwa-jekyll-starter.netlify.com
 social:
   - name: twitter
-    url: 'https://twitter.com/jshvgt'
+    url: 'https://twitter.com/yourname'
     class: u-url;
   - name: github
-    url: 'https://github.com/dumaurier'
+    url: 'https://github.com/yourname'
     class: u-url;
   - name: email
-    url: 'mailto:joshvogt@gmail.com'
+    url: 'mailto:email@domain.com'
     class: u-email
   - name: sms
     url: 'sms:+14169671111'
     class: u-tel
   - name: my site
-    url: 'https://pwa-jekyll-starter.netlify.com/'
+    url: 'https://domain.com'
     class: u-url

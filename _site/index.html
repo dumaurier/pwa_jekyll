@@ -56,7 +56,7 @@
   <style>
   *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;-webkit-text-decoration-style:double;-moz-text-decoration-style:double;text-decoration-style:double;text-decoration-color:#93caeb}a:focus,a:hover{text-decoration:inherit;outline:1px dashed #cf4829;background:#fdf9d8}img{max-width:100%}.highlighter-rouge{margin-top:1rem}.highlight{padding:.5rem;line-height:1.6;background:#0073BD;color:#fff;font-size:16px;font-size:1rem;overflow:auto}.disabled-link{cursor:not-allowed;color:#f7fafb}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f7fafb;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}.global-footer{min-height:130px;padding:.5rem}.indieweb-social{list-style:none;margin:0;padding:20px;display:grid;grid-template-columns:repeat(auto-fill, minmax(100px, 1fr))}.indieweb-social li+li{margin-top:0}.indieweb-social a{color:#525967;text-decoration-color:#cf4829}.footer-bio{max-width:460px;padding:20px}.header-container{-ms-flex:0 0 60px;flex:0 0 60px;width:100vw;border-bottom:0.15rem solid #525967;height:3.5rem;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between}.header-container h1{margin:0 0 0 20px;font-size:14px;font-size:.875rem;font-weight:600}.header-container .home-link{display:inline-block;white-space:nowrap;line-height:60px;height:100%}.header-container .site-logo{width:55px;float:left;margin-right:.5rem}.header-container .header-links{margin:0}.header-container .header-links a{padding:0 5px;text-decoration-color:#850057;color:#25282e}@media screen and (min-width: 30rem){.header-links{margin:0 3rem}}
 
-    .home{display:grid;grid-template-columns:repeat(8, 1fr);padding:1rem}.heading{font-size:20.8px;font-size:1.3rem;grid-column:1 / -1}.heading-sub{grid-column:2 / -1}.indie-intro{grid-column:1 / -1}.feed-block{grid-column:1 / -1}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:1.3rem}@media screen and (min-width: 30rem){.home{display:grid;grid-template-columns:repeat(16, 1fr)}.heading{font-size:35.2px;font-size:2.2rem;grid-column:4 / 12}.heading-sub{grid-column:5 / 13;grid-row:2}.indie-intro{grid-column:1 / 6}.feed-block{grid-column:7 / -1}}
+    .home{display:grid;grid-template-columns:repeat(8, 1fr);padding:1rem}.heading{font-size:20.8px;font-size:1.3rem;grid-column:1 / -1}.heading-sub{grid-column:2 / -1}.indie-intro{grid-column:1 / -1}.feed-block{grid-column:1 / -1}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:1.3rem}@media screen and (min-width: 30rem){.home{display:grid;grid-template-columns:repeat(16, 1fr)}.main-logo{grid-column:4 / 12}.heading{font-size:35.2px;font-size:2.2rem;grid-column:4 / 12}.heading-sub{grid-column:5 / 13;grid-row:2}.indie-intro{grid-column:2 / 12}.feed-block{grid-column:2 / 12}}
 
    
   </style>
@@ -90,44 +90,21 @@
 
 
     <main id="main" class="home" tabindex="0">
-      <h1 class="heading">Jekyll + PWA + IndieWeb Starter</h1>
-<p class="heading-sub">
-    A Jekyll/PWA starter project. <a href="https://github.com/dumaurier/pwa_jekyll">Find out more about the Jekyll + PWA + IndieWeb Stater on GitHub.</a>
-</p>
+      <img class="main-logo" src="/static-assets/images/icon-512x512.png" alt="logo for the Jekyll PWA" />
 
-<section class="block indie-intro">
-  
-  <h2>Own your content</h2>
- 
-	<p>
-	This is a boilerplate project to start writing with Jekyll. It can be published with your own host or directly on GitHub. You can also use other free hosting services like Netlify, CloudFlare or CloudCannon.
-  </p>
-  
-	<p>
-	This Jekyll boilerplate includes: 
-	<ul>
-	  <li>Critical CSS</li>
-	  <li>Service Worker</li>
-	  <li>Web App manifest</li>
-	  <li>RSS feed</li>
-	  <li>IndieWeb microformats</li>
-    <li>Webmentions</li>  
-  </ul>
-  
-	</p>
- </section>
+<h1 class="heading">Jekyll + PWA + IndieWeb</h1>
 
   <section class="block feed-block">
     <h2>Blog</h2>
       <ul class="posts-list">
         
         <li>
-          <a href="/posts/blog/this-is-a-test/">This is a test - January 05, 2018</a>
+          <a href="/posts/2018/this-is-a-test/">This is a test - January 05, 2018</a>
           <p>This post is a demonstration of indieweb blogging.</p>
         </li>
        
         <li>
-          <a href="/posts/blog/test-one/">Welcome to Jekyll! - November 17, 2015</a>
+          <a href="/posts/2015/test-one/">Welcome to Jekyll! - November 17, 2015</a>
           <p>short desciption of your post.</p>
         </li>
        
@@ -137,30 +114,9 @@
           
           <li>
             <p>
-              Another Test
-            </p>
-            <a href="/posts/note/more-webmentions-test/">Read full note &raquo; </a>
-          </li>
-         
-          <li>
-            <p>
-              Webmention test-o-matic
-            </p>
-            <a href="/posts/note/webmentions-for-a-friend/">Read full note &raquo; </a>
-          </li>
-         
-          <li>
-            <p>
               The Lighthouse score for this project is...really good. 
             </p>
-            <a href="/posts/note/this-projects-lighthouse-score/">Read full note &raquo; </a>
-          </li>
-         
-          <li>
-            <p>
-              a thing
-            </p>
-            <a href="/posts/note/things/">Read full note &raquo; </a>
+            <a href="/notes/2018/this-projects-lighthouse-score/">Read full note &raquo; </a>
           </li>
          
         </ul>
@@ -168,31 +124,10 @@
         <ul class="links-list">
           
           <li>
-            <a href="https://brid.gy/">Bridgy</a>
-              <p><p>A service to collect events from social media platforms for your own site.</p>
-</p>
-              <a href="/posts/link/bridgy/">View Permalink</a>
-            </li>
-         
-          <li>
             <a href="https://medium.com/netlify/10-netlify-features-to-surprise-and-delight-225e846b7b21">10 Netlify Features</a>
               <p><p>Netlify does more than just host your static site. It gives you unbelievable control of deployments, form handling and SSL.</p>
 </p>
-              <a href="/posts/link/10-netlify-features/">View Permalink</a>
-            </li>
-         
-          <li>
-            <a href="https://webmention.io/">Webmentions Service</a>
-              <p><p>Webmention.io is a hosted service to help you with Webmentions.</p>
-</p>
-              <a href="/posts/link/webmentions-io/">View Permalink</a>
-            </li>
-         
-          <li>
-            <a href="https://indiewebify.me/">IndieWebifyMe</a>
-              <p><p>A guide to getting started on the indieweb</p>
-</p>
-              <a href="/posts/link/indiewebify-me/">View Permalink</a>
+              <a href="/links/2018/10-netlify-features/">View Permalink</a>
             </li>
          
           </ul>
@@ -218,19 +153,19 @@
     <ul class="indieweb-social">
      
        <li>
-         <a href="https://twitter.com/jshvgt" rel="me" class="u-url;">
+         <a href="https://twitter.com/yourname" rel="me" class="u-url;">
            twitter
          </a>
        </li>
      
        <li>
-         <a href="https://github.com/dumaurier" rel="me" class="u-url;">
+         <a href="https://github.com/yourname" rel="me" class="u-url;">
            github
          </a>
        </li>
      
        <li>
-         <a href="mailto:joshvogt@gmail.com" rel="me" class="u-email">
+         <a href="mailto:email@domain.com" rel="me" class="u-email">
            email
          </a>
        </li>
@@ -242,7 +177,7 @@
        </li>
      
        <li>
-         <a href="https://pwa-jekyll-starter.netlify.com/" rel="me" class="u-url">
+         <a href="https://domain.com" rel="me" class="u-url">
            my site
          </a>
        </li>
@@ -253,7 +188,7 @@
     <p class="p-note footer-bio">
       This is a bio for use with microformats h-card. This helps other machines understand your content for IndieWeb publishing. 
     </p>
-    <small>&copy; 2019 Josh Vogt. all mistakes are my own.</small>
+    <small>&copy; 2019 --Your Name--. all mistakes are my own.</small>
   </div>
 
 

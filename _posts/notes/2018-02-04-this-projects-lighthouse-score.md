@@ -5,7 +5,7 @@ layout: posts
 categories: note
 abstract: 'The Lighthouse score for this project is...really good. '
 author: Josh Vogt
-permalink: '/posts/:categories/:title/'
+permalink: '/notes/:year/:title/'
 ---
 ![Screenshot of Lighthouse Score. Score is detailed in text. They are good scores.](/static-assets/images/pwa-min.png)
 
