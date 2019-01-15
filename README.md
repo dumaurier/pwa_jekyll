@@ -5,7 +5,7 @@ A simple Jekyll starter with PWA functionality baked in. This includes a manifes
 ## Note ##
 To get started with a clean version of the PWA Jekyll starter you can clone a clean branch:
 ```
-git clone -b clean --single-branch https://githubom/dumaurier/pwa_jekyll.git
+git clone -b clean --single-branch https://github.com/dumaurier/pwa_jekyll.git
 ```
 
 ## Getting Started:
