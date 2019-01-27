@@ -1,0 +1,45 @@
+<head lang="en">
+    <!-- Static Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="&copy 2018 " />
+    <meta name="description" content="Site description" />
+    <meta name="robots" content="index, follow"  />
+    <link rel="canonical" href="{{ site.domainname }}" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0073bd">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/static-assets/images/apple-touch-icon.png" | relative_url }}" >
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}static-assets/images/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}static-assets/images/icon-16x16.png">
+    <link rel="mask-icon" href="static-assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="icon" href="favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.sitename}} RSS" href="/feed.xml">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  
+  
+    <!-- Meta tags for social media -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{page.title}}"  />
+    <meta property="og:url" content="{{ site.domainname }}{{ page.url }}"  />
+    <meta property="og:site_name" content="{{ site.title }}"  />
+    <meta property="og:image" content="static-assets/images/icon-512x512.png" />
+    <meta property="og:description" content="Site description"  />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{{ page.title }}" />
+    <meta property="twitter:image" content="{{ site.domainname }}{{ site.baseurl }}{{ site.assetsurl }}images/icon-512x512.png" />
+    <meta property="twitter:site" content="@jshvgt"  />
+    <meta property="twitter:creator" content="@jshvgt"  />
+    <meta property="twitter:description" content="site description"  />
+    <link rel="pingback" href="https://webmention.io/{{ site.about.me.webmention}}/xmlrpc" />
+    <link rel="webmention" href="https://webmention.io/{{ site.about.me.webmention}}/webmention" />
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  
+    <!-- BOOTSTRAP -->
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static-assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/static-assets/bootstrap/css/bootstrap-theme.css">
+
+  </head>
+  

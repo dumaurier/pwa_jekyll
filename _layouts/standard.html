@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="online">
 
-  {% include standard/new-head.html %}
+    {% if site.bootstrap == false %}
+    {% include components/head.html %}
+    {% else %}
+    {% include bootstrap/bootstrap.html %}
+    {% endif %}
 
   <body>
-    {% include standard/new-header.html %}
+    {% include components/header.html %}
 
-    <main id="main" tabindex="0">
+    <main id="main" class="container" tabindex="0">
       {{ content }}
     </main>
 
-    {% include standard/new-footer.html %}
+    {% if site.bootstrap == false %}
+    {% include components/footer.html %}
+    {% else %}
+    {% include bootstrap/boot-footer.html %}
+    {% endif %}
 
   </body>
 </html>

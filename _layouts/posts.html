@@ -12,54 +12,15 @@ layout: standard
        <a class="u-url" href="{{ site.domainname }}{{ page.url }}">Permalink</a>
      </p>
   </header>
+
   <div class="e-content post-container">
     {{ content }}
   </div>
 
+  {% if site.webmentions == true %}
+    {% include components/mentions.html %}
+  {% endif %}
 
-  <aside class="post-webmentions" hidden>
-    <h2>Mentions</h2>
-    <ul class="mentions-list" id="webmentions-container">
-
-    </ul>
-  </aside>
-
-  <div class="mention-response">
-    <h4>Send a response</h4>
-    <p>
-      If you've written a response to this post enter the url of your post and send it over.
-    </p>
-    <form class="mention-form" method="post" action="https://webmention.io/{{ site.data.about.me.webmention }}/webmention">
-      <fieldset>
-          <label for="url-mention">Add your response:</label>
-          <input id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
-          <input type="hidden" name="target" value="{{ site.domainname}}{{ page.url }}"  />
-          <button>Send webmention</button>
-      </fieldset>
-    </form>
-  </div>
-</article>
-
-
-
-<template id="mention-tmpl">
-  <li>
-    <blockquote class="mention-item">
-      <div class="mention-reply-content"></div>
-      <cite>
-        <span class="mention-reply-author"></span>
-        <a class="mention-reply-link"></a>
-      </cite>
-    </div>
-  </li>
-</template>
-
-<script>
-  var mainScript = document.createElement('script');
-  mainScript.src = '/static-assets/js/posts.js';
-  document.body.appendChild(mainScript);
-</script>
-
-
+  
 <input id="page-path" type="hidden" value="{{ site.domainname}}{{ page.url }}" />
 <input id="page-id" type="hidden" value="{{ page.id | md5 }}" /> 

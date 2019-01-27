@@ -1,10 +1,11 @@
 # This is the about file. If you want to use IndieWeb Microformats and Webmentions, fill this section out with your information.
+
 me:
   name: --Your Name--
   bio: >-
     This is a bio for use with microformats h-card. This helps other
     machines understand your content for IndieWeb publishing.
-  webmention: pwa-jekyll-starter.netlify.com
+  webmention: pwa-jekyll-starter.netlify.com #domain for your site
 social:
   - name: twitter
     url: 'https://twitter.com/yourname'
