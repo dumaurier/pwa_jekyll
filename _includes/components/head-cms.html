@@ -1,12 +1,4 @@
 <head lang="en">
-  <script>
-    // https://github.com/filamentgroup/loadCSS
-    !function(e){"use strict"
-    var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
-    return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
-    setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
-    "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
-  </script>
   <!-- Static Meta Tags -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,6 +36,7 @@
   <link rel="webmention" href="https://webmention.io/{{ site.about.me.webmention}}/webmention" />
   <link rel="authorization_endpoint"
         href="https://indieauth.com/auth">
+
   {% capture styles %}
     {% include critical/new-critical.css %}
   {% endcapture %}
@@ -63,17 +56,6 @@
   <style>
   {{ styles | scssify }}{{ critical }}{{ postsStyle}}
   </style>
-
-  {% if jekyll.environment != "production" %}
-  <script>
-    loadCSS("{{ site.baseurl }}static-assets/css/new-base.css");
-  </script>
-  {% endif %}
-
- {% if jekyll.environment == "production" %}
- <script>
-    loadCSS("{{ site.baseurl }}static-assets/css/new-base-820ec1693e.css");
- </script>
- {% endif %}
+  
  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>

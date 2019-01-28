@@ -8,6 +8,6 @@ abstract: >-
   control of deployments, form handling and SSL.
 layout: links
 categories: link
-permalink: '/posts/:categories/:title/'
+permalink: '/links/:year/:title/'
 ---
 Netlify does more than just host your static site. It gives you unbelievable control of deployments, form handling and SSL. 

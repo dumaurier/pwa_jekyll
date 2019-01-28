@@ -84,6 +84,21 @@ gulp.task('browser-sync', ['jekyll-watch', 'sass-fast', 'scripts', 'page-scripts
         .pipe(gulp.dest('static-assets/js'));
 });
 
+/**
+ * Bootstrap
+ */
+gulp.task('boot-css', function() {
+    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
+        .pipe(gulp.dest("static-assets/bootstrap/css"))
+});
+
+gulp.task('boot-js', function() {
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js'])
+        .pipe(gulp.dest("static-assets/bootstrap/js"))
+});
 
 
 
@@ -161,7 +176,7 @@ gulp.task('watch', function () {
 gulp.task('default', ['scripts', 'page-scripts', 'critical', 'sass-fast', 'browser-sync', 'watch']);
 
 /**
- * Gulp task for new homepage
- * compile the jekyll site, launch BrowserSync & watch files.
+ * Gulp task to build with Bootstrap
+ * data/about.yml should have bootstrap: true set or nothing will show up the way you want it to. 
  */
-gulp.task('new-home', ['critical', 'sass-fast', 'browser-sync', 'watch']);
+gulp.task('bootstrapper', ['boot-css', 'boot-js', 'browser-sync', 'watch']);

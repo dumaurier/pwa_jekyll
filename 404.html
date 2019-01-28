@@ -1,15 +1,11 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
   <head lang="en">
-  <script>
-    // https://github.com/filamentgroup/loadCSS
-    !function(e){"use strict"
-    var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
-    return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
-    setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
-    "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
-  </script>
 
   <link rel="canonical" href="" />
   <link rel="icon" href="favicon.ico">
@@ -20,15 +16,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script>
-  loadCSS('/static-assets/css/base-fast.css');
-  </script>
+  {% capture styles %}
+    {% include critical/new-critical.css %}
+  {% endcapture %}
+
+  <style>
+    {{ styles | scssify }}
+  </style>
 
 </head>
 
-<main id="main" class="main-404">
-  <h1>404</h1>
-  <p>
-   Page not found. :(
-  </p>
-</main>
+{% include components/header.html %}
+
+  <main id="main" tabindex="0">
+  
+    <h1>404</h1>
+    
+      <p>Page not found. :(</p>
+      
+  </main>
+
+{% include components/footer.html %}
+

@@ -2,7 +2,7 @@
 layout: posts
 title: This is a test
 date: 2018-01-05 22:16:01 +0000
-permalink: /posts/:categories/:title/
+permalink: /posts/:year/:title/
 author: Josh Vogt
 abstract: This post is a demonstration of indieweb blogging.
 categories: blog
