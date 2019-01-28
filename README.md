@@ -3,7 +3,7 @@
 A simple Jekyll starter with PWA functionality baked in. This includes a manifest.json file and a sw.js file that caches an app shell. Basic support for IndieWeb Blogging is included, including an RSS feed. Webmention support is included as well but requires a few extra steps to set up.
 
 <!-- Markdown snippet -->
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dumaurier/pwa_jekyll.git)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dumaurier/pwa_jekyll)
 
 ## Note ##
 To get started with a clean version of the PWA Jekyll starter you can clone a clean branch:
