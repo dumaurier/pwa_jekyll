@@ -180,3 +180,4 @@ gulp.task('default', ['scripts', 'page-scripts', 'critical', 'sass-fast', 'brows
  * data/about.yml should have bootstrap: true set or nothing will show up the way you want it to. 
  */
 gulp.task('bootstrapper', ['boot-css', 'boot-js', 'browser-sync', 'watch']);
+gulp.task('boot-build', ['boot-css', 'boot-js','scripts', 'page-scripts', 'critical', 'sass-fast', 'jekyll-build']);
