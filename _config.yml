@@ -27,8 +27,8 @@ sass:
   style: :compressed
 # webmentions = true/false
 # bootstrap = true/false
-webmentions: false
-bootstrap: true
+webmentions: true
+bootstrap: false
 
 # front matter defaults for pages and posts. These fields are also available for editing in the Jekyll Admin GUI. This is available at localhost:4000/admin
 defaults:
