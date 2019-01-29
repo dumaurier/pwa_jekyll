@@ -30,23 +30,3 @@ sass:
 webmentions: true
 bootstrap: false
 
-# front matter defaults for pages and posts. These fields are also available for editing in the Jekyll Admin GUI. This is available at localhost:4000/admin
-defaults:
-  - scope:
-      path: ""
-    values:
-      all: true
-  - scope:
-      path: ''
-      type: pages
-    values:
-      page_only: true
-      layout: standard
-  - scope:
-      path: ''
-      type: posts
-    values:
-      layout: posts
-      abstract: short desciption of your post.
-      author: Josh Vogt
-
