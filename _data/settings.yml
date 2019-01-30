@@ -1,4 +1,4 @@
 title: A PWA Powered by Jekyll and Served with Netlify
-domainname: 'https://pwa-jekyll-starter.netlify.com/'
+domainname: 'https://pwa-jekyll-starter.netlify.com'
 webmention: true
 bootstrap: false
