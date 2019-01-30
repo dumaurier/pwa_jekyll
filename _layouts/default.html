@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="online">
 
-    {% if site.bootstrap == false %}
+    {% if site.data.settings.bootstrap == false %}
     {% include components/head-cms.html %}
     {% else %}
     {% include bootstrap/bootstrap.html %}
@@ -14,7 +14,7 @@
       {{ content }}
     </main>
 
-    {% if site.bootstrap == false %}
+    {% if site.data.settings.bootstrap == false %}
     {% include components/footer.html %}
     {% else %}
     {% include bootstrap/boot-footer.html %}

@@ -24,7 +24,7 @@
 <header class="header-container">
   <h1>
     <a class="home-link" href="/">
-    My Website
+    A PWA Powered by Jekyll and Served with Netlify
     </a>
 </h1>
 
@@ -44,50 +44,46 @@
       
   </main>
 
-<footer class="global-footer" role="contentinfo">
+<footer class="global-footer m-10 container" role="contentinfo">
   <div class="indieweb-card h-card">
-    <ul class="indieweb-social">
-     
-       <li>
-         <a href="https://twitter.com/yourname" rel="me" class="u-url;">
-           twitter
-         </a>
-       </li>
-     
-       <li>
-         <a href="https://github.com/yourname" rel="me" class="u-url;">
-           github
-         </a>
-       </li>
-     
-       <li>
-         <a href="mailto:email@domain.com" rel="me" class="u-email">
-           email
-         </a>
-       </li>
-     
-       <li>
-         <a href="sms:+14169671111" rel="me" class="u-tel">
-           sms
-         </a>
-       </li>
-     
-       <li>
-         <a href="https://domain.com" rel="me" class="u-url">
-           my site
-         </a>
-       </li>
-     
-   </ul>
+      <ul class="indieweb-social nav">
+          
+           <li class="nav-item">
+             <a href="https://twitter.com/jshvgt" rel="me" class="u-url nav-link">
+               twitter
+             </a>
+           </li>
+         
+           <li class="nav-item">
+             <a href="https://github.com/dumaurier" rel="me" class="u-url nav-link">
+               github
+             </a>
+           </li>
+         
+           <li class="nav-item">
+             <a href="mailto:joshvogt@gmail.com" rel="me" class="u-email nav-link">
+               email
+             </a>
+           </li>
+         
+           <li class="nav-item">
+             <a href="sms:+14169671111" rel="me" class="u-tel nav-link">
+               sms
+             </a>
+           </li>
+         
+           <li class="nav-item">
+             <a href="https://joshvogt.co" rel="me" class="u-url nav-link">
+               my site
+             </a>
+           </li>
+         
+      </ul>
+      
+      <p class="p-note footer-bio">This is a bio for use with microformats h-card. This helps other machines understand your content for IndieWeb publishing. This Jekyll + PWA starter was made  for fun. </p>
 
-    
-    <p class="p-note footer-bio">
-      This is a bio for use with microformats h-card. This helps other machines understand your content for IndieWeb publishing. 
-    </p>
-    <small>&copy; 2019 --Your Name--. all mistakes are my own.</small>
-  </div>
-
-
+      <small>&copy; 2019 Josh Vogt. all mistakes are my own.</small>
+  </div>  
 </footer>
 
 
@@ -96,15 +92,15 @@
 <script>
 // Ye Olde Service Worker----------------------------------------------
 (function() {
- 'use strict';
-  if ('serviceWorker' in navigator) {
-   navigator.serviceWorker
-   .register('/sw.js',{
-    scope: '/'
-   })
-   .then(function() { console.log('Service Worker Registered');  });
-  }
- })();
+'use strict';
+if ('serviceWorker' in navigator) {
+ navigator.serviceWorker
+ .register('/sw.js',{
+  scope: '/'
+ })
+ .then(function() { console.log('Service Worker Registered');  });
+}
+})();
 </script>
 
 

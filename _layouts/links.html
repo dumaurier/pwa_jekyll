@@ -7,10 +7,10 @@ layout: standard
     <h1 class="p-name">
         <a href="{{ page.link }}">{{ page.title }}</a>
     </h1>
-    <p>Linked added by <a class="p-author h-card" href="https://joshvogt.co">{{ page.author }}</a>
+    <p>Linked added by <a class="p-author h-card" href="{{ site.data.settings.domainname }}">{{ page.author }}</a>
      on <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
      <p>
-       <a class="u-url" href="{{ site.domainname }}{{ page.url }}">Permalink</a>
+       <a class="u-url" href="{{ site.data.settings.domainname }}{{ page.url }}">Permalink</a>
      </p>
   </header>
   
@@ -18,7 +18,7 @@ layout: standard
     {{ content }}
   </div>
 
-  {% if site.webmentions == true %}
+  {% if site.data.settings.webmention == true %}
     {% include components/mentions.html %}
   {% endif %}
 

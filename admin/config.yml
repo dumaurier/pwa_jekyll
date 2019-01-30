@@ -6,17 +6,34 @@ media_folder: "/static-assets/images/uploads" # Media files will be stored in th
 public_folder: "/static-assets/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections: # A list of collections the CMS should be able to edit
-  - label: "About"
-    name: "about"
+  - label: "Site Info"
+    name: "site info"
     files:
+      - label: "About"
+        name: "about"
+        file: "_data/about.yml"
+        fields:
+          - {label: name, name: name, widget: string}
+          - {label: bio, name: bio, widget: text}
+      - label: "Site Settings"
+        name: "settings"
+        file: "_data/settings.yml"
+        fields:
+          - {label: Title, name: title, widget: string, hint: "The name of your site" }
+          - {label: Domain, name: domainname, widget: string, hint: "The url of your site. Example: https://mysite.com" }
+          - {label: Webmentions, name: webmention, widget: boolean, default: false }
+          - {label: Bootstrap, name: bootstrap, widget: boolean, default: false }
       - label: "Social Media"
         name: "social"
         file: "_data/social.yml"
-        widget: list
         fields:
-          - {label: Name, name: name, widget: string}
-          - {label: Icon, name: icon, widget: string}
-          - {label: Link, name: link, widget: string} 
+          - label: platform
+            name: platform
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string, hint: "The name of the platform, i.e. Twitter, Facebook" }
+              - {label: URL, name: url, widget: string, hint: "The full address for your profile, i.e. https://twitter.com/jshvgt" }
+              - {label: Class, name: class, widget: string, hint: "The microformat for the link type (u-tel, u-url, u-email)" }
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     description: >

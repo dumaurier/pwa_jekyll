@@ -1,40 +1,36 @@
-<footer class="global-footer" role="contentinfo">
+<footer class="global-footer m-10 container" role="contentinfo">
   <div class="indieweb-card h-card">
-    <ul class="indieweb-social">
-     {% for social in site.data.about.social %}
-       <li>
-         <a href="{{social.url}}" rel="me" class="{{ social.class }}">
-           {{ social.name }}
-         </a>
-       </li>
-     {% endfor %}
-   </ul>
+      <ul class="indieweb-social nav">
+          {% for social in site.data.social.platform %}
+           <li class="nav-item">
+             <a href="{{social.url}}" rel="me" class="{{ social.class }} nav-link">
+               {{ social.name }}
+             </a>
+           </li>
+         {% endfor %}
+      </ul>
+      
+      <p class="p-note footer-bio">{{ site.data.about.bio }} </p>
 
-    {% assign about = site.data.about.me %}
-    <p class="p-note footer-bio">
-      {{ about.bio }} 
-    </p>
-    <small>&copy; {{ site.time | date: '%Y' }} {{ about.name }}. all mistakes are my own.</small>
-  </div>
-
-
+      <small>&copy; {{ site.time | date: '%Y' }} {{ site.data.about.name }}. all mistakes are my own.</small>
+  </div>  
 </footer>
 
 
 {% if page.pagejs %}
- <script  src="{{ site.baseurl }}static-assets/js/{{ page.pagejs }}"></script>
+<script  src="{{ site.baseurl }}static-assets/js/{{ page.pagejs }}"></script>
 {% endif %}
 
 <script>
 // Ye Olde Service Worker----------------------------------------------
 (function() {
- 'use strict';
-  if ('serviceWorker' in navigator) {
-   navigator.serviceWorker
-   .register('/sw.js',{
-    scope: '/'
-   })
-   .then(function() { console.log('Service Worker Registered');  });
-  }
- })();
+'use strict';
+if ('serviceWorker' in navigator) {
+ navigator.serviceWorker
+ .register('/sw.js',{
+  scope: '/'
+ })
+ .then(function() { console.log('Service Worker Registered');  });
+}
+})();
 </script>

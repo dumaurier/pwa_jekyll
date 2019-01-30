@@ -1,43 +1,41 @@
 <aside class="post-webmentions" hidden>
-    <h2>Mentions</h2>
-    <ul class="mentions-list" id="webmentions-container">
+  <h2>Mentions</h2>
+  <ul class="mentions-list" id="webmentions-container">
 
-    </ul>
-  </aside>
+  </ul>
+</aside>
 
-  <div class="mention-response">
-    <h4>Send a response</h4>
-    <p>
-      If you've written a response to this post enter the url of your post and send it over.
-    </p>
-    <form class="mention-form" method="post" action="https://webmention.io/{{ site.data.about.me.webmention }}/webmention">
-      <fieldset class="form-group">
-          <label for="url-mention">Add your response:</label>
-          <input class="form-control" id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
-          <input type="hidden" name="target" value="{{ site.domainname}}{{ page.url }}"  />
-          
-      </fieldset>
-      <button class="btn btn-primary">Send webmention</button>
-    </form>
-  </div>
+<div class="mention-response">
+  <h4>Send a response</h4>
+  <p>
+    If you've written a response to this post enter the url of your post and send it over.
+  </p>
+  <form class="mention-form" method="post" action="https://webmention.io/{{ site.data.settings.domainname }}/webmention">
+    <fieldset class="form-group">
+        <label for="url-mention">Add your response:</label>
+        <input class="form-control" id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
+        <input type="hidden" name="target" value="{{ site.data.settings.domainname }}{{ page.url }}"  />
+        
+    </fieldset>
+    <button class="btn btn-primary">Send webmention</button>
+  </form>
+</div>
 </article>
 
-
-
 <template id="mention-tmpl">
-  <li>
-    <blockquote class="mention-item">
-      <div class="mention-reply-content"></div>
-      <cite>
-        <span class="mention-reply-author"></span>
-        <a class="mention-reply-link"></a>
-      </cite>
-    </div>
-  </li>
+<li>
+  <blockquote class="mention-item">
+    <div class="mention-reply-content"></div>
+    <cite>
+      <span class="mention-reply-author"></span>
+      <a class="mention-reply-link"></a>
+    </cite>
+  </div>
+</li>
 </template>
 
 <script>
-  var mainScript = document.createElement('script');
-  mainScript.src = '/static-assets/js/posts.js';
-  document.body.appendChild(mainScript);
+var mainScript = document.createElement('script');
+mainScript.src = '/static-assets/js/posts.js';
+document.body.appendChild(mainScript);
 </script>

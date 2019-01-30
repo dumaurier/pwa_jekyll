@@ -5,11 +5,11 @@ layout: standard
 <article class="post h-entry">
   <header>
     <h1 class="p-name">{{ page.title }}</h1>
-    <p>Published by <a class="p-author h-card" href="https://joshvogt.co">{{ page.author }}</a>
+    <p>Published by <a class="p-author h-card" href="{{ site.data.settings.domainname }}">{{ page.author }}</a>
      on <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
      <p class="p-summary"><em>{{ page.abstract }}</em></p>
      <p>
-       <a class="u-url" href="{{ site.domainname }}{{ page.url }}">Permalink</a>
+       <a class="u-url" href="{{ site.data.settings.domainname }}{{ page.url }}">Permalink</a>
      </p>
   </header>
 
@@ -17,7 +17,7 @@ layout: standard
     {{ content }}
   </div>
 
-  {% if site.webmentions == true %}
+  {% if site.data.settings.webmention == true %}
     {% include components/mentions.html %}
   {% endif %}
 
