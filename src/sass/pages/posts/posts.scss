@@ -48,16 +48,37 @@
     padding: 0 0 20px 0;
     margin-top: 30px;
   }
+}
 
-  input[type="url"]{
-    width: 75%;
-    margin-right: 2%;
-    border: 1px solid $grey-dark;
-    padding: 8px;
-    border-radius: 4px;
+.fieldset-hate{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 20px 50px;
+  grid-gap: 8px;
+
+  label{
+    grid-column: 1 / -1;
   }
 
-  input:required:empty{
-    border:1px solid $grey-dark;
+  button{
+    margin-top: 0;
+  }
+}
+
+input[type="url"]{
+  border: 1px solid $grey-dark;
+  padding: 8px;
+  border-radius: 4px;
+  @include font-size(1);
+}
+
+input:required:empty{
+  border:1px solid $grey-dark;
+}
+
+@media screen and (max-width: 500px){
+  .fieldset-hate{
+    grid-template-rows: 20px repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
