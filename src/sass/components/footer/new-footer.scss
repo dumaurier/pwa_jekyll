@@ -1,6 +1,7 @@
 .global-footer{
-  min-height: 130px;
-  padding: .5rem;
+  background: $grey-dark;
+  height: auto;
+  color: $color-yellow-pale;
 }
 
 .indieweb-social{
@@ -15,12 +16,17 @@
  }
 
  a{
-   color: $grey;
-   text-decoration-color: $color-orange;
+   color: $color-yellow-pale;
+   text-decoration-color: $color-yellow-pale;
+
+   &:hover{
+     color: $color-purple;
+   }
  }
 }
 
 .footer-bio{
   max-width: 460px;
   padding: 20px;
+  color: inherit;
 }
