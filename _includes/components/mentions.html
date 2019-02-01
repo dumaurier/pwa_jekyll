@@ -15,7 +15,7 @@
       <div class="fieldset-hate">
         <label for="url-mention">Add your response:</label>
         <input class="form-control" id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
-        <input type="hidden" name="target" value="https://{{ site.data.settings.domainname }}{{ page.url }}"  />
+        <input type="hidden" name="target" value="{{ site.data.settings.domainname }}{{ page.url }}"  />
         <button class="btn btn-primary">Send webmention</button>
       </div>
     </fieldset>
