@@ -36,7 +36,7 @@
       {% include critical/new-critical.css %}
     {% endcapture %}
 
-    {% if page.layout == "posts" %}
+    {% if page.layout == "posts" or page.layout == "links" %}
       {% capture postsStyle %}
         {% include critical/posts.css %}
       {% endcapture %}
