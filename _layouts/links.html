@@ -3,18 +3,19 @@ layout: standard
 ---
 
 <article class="post h-entry">
-  <header>
+  <header class="link-header">
     <h1 class="p-name">
-        <a href="{{ page.link }}">{{ page.title }}</a>
+        {{ page.title }}
     </h1>
     <p>Linked added by <a class="p-author h-card" href="{{ site.data.settings.domainname }}">{{ page.author }}</a>
      on <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
      <p>
-       <a class="u-url" href="{{ site.data.settings.domainname }}{{ page.url }}">Permalink</a>
+       <a class="u-url" href="{{ page.url }}">Permalink</a>
      </p>
   </header>
   
   <div class="e-content post-container">
+    <a href="{{ page.link }}">{{ page.link}}</a>
     {{ content }}
   </div>
 
