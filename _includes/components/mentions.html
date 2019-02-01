@@ -12,12 +12,14 @@
   </p>
   <form class="mention-form" method="post" action="https://webmention.io/{{ site.data.settings.domainname }}/webmention">
     <fieldset class="form-group">
+      <div class="fieldset-hate">
         <label for="url-mention">Add your response:</label>
         <input class="form-control" id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
         <input type="hidden" name="target" value="https://{{ site.data.settings.domainname }}{{ page.url }}"  />
-        
+        <button class="btn btn-primary">Send webmention</button>
+      </div>
     </fieldset>
-    <button class="btn btn-primary">Send webmention</button>
+    
   </form>
 </div>
 </article>
