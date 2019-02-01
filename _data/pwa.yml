@@ -1,0 +1,12 @@
+enablePWA: true
+name: Name
+shortName: "Short Name"
+icon16: icon-16x16.jpg
+icon32: icon-32x32.jpg
+icon192: icon-192x192.jpg
+icon512: icon-512x512.jpg
+startUrl: "/"
+display: standalone
+bgColour: "#007ac9"
+themeColour: "0073bd"
+scope: "/"

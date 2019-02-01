@@ -16,6 +16,11 @@
   </div>  
 </footer>
 
+{% if site.data.settings.bootstrap == true %}
+<script src="{{ site.baseurl }}static-assets/bootstrap/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}static-assets/bootstrap/js/bootstrap.min.js"></script>
+{% endif %}
+
 
 {% if page.pagejs %}
 <script  src="{{ site.baseurl }}static-assets/js/{{ page.pagejs }}"></script>

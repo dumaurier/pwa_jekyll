@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="online">
 
-    {% if site.data.settings.bootstrap == false %}
     {% include components/head.html %}
-    {% else %}
-    {% include bootstrap/bootstrap.html %}
-    {% endif %}
 
   <body>
     {% include components/header.html %}
@@ -14,11 +10,7 @@
       {{ content }}
     </main>
 
-    {% if site.data.settings.bootstrap == false %}
     {% include components/footer.html %}
-    {% else %}
-    {% include bootstrap/boot-footer.html %}
-    {% endif %}
 
   </body>
 </html>

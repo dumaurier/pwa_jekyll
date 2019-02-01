@@ -17,41 +17,43 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.data.settings.title }} RSS" href="/feed.xml">
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
 
-  <!-- Meta tags for social media -->
-  <meta property="og:locale" content="en" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{page.title}}"  />
-  <meta property="og:url" content="//{{ site.data.settings.domainname }}{{ page.url }}"  />
-  <meta property="og:site_name" content="{{ site.title }}"  />
-  <meta property="og:image" content="static-assets/images/icon-512x512.png" />
-  <meta property="og:description" content="Site description"  />
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="{{ page.title }}" />
-  <meta property="twitter:image" content="//{{ site.data.settings.domainname }}{{ site.baseurl }}{{ site.assetsurl }}images/icon-512x512.png" />
-  <meta property="twitter:site" content="@jshvgt"  />
-  <meta property="twitter:creator" content="@jshvgt"  />
-  <meta property="twitter:description" content="site description"  />
+  {% if site.data.settings.opengraph == true %}
+  {% include components/meta-social.html %}
+  {% endif %}
+
   <link rel="pingback" href="https://webmention.io/{{ site.data.settings.domainname }}/xmlrpc" />
   <link rel="webmention" href="https://webmention.io/{{ site.data.settings.domainname }}/webmention" />
   <link rel="authorization_endpoint" href="https://indieauth.com/auth">
 
-  {% capture styles %}
-    {% include critical/new-critical.css %}
-  {% endcapture %}
+  {% if site.data.settings.bootstrap == true %}
+    <!-- BOOTSTRAP -->
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static-assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/static-assets/bootstrap/css/bootstrap-theme.css">
+    {% else %}
 
-  {% if page.layout == "posts" %}
-    {% capture postsStyle %}
-      {% include critical/posts.css %}
+    {% capture styles %}
+      {% include critical/new-critical.css %}
     {% endcapture %}
+
+    {% if page.layout == "posts" %}
+      {% capture postsStyle %}
+        {% include critical/posts.css %}
+      {% endcapture %}
+    {% endif %}
+
+    {% if page.pagestyle %}
+      {% capture critical %}
+        {% include critical/{{ page.pagestyle }} %}
+      {% endcapture %}
+    {% endif %}
+
+    <style>
+      {{ styles }}{{ critical }}{{ postsStyle}}
+    </style>
+
   {% endif %}
 
-  {% if page.pagestyle %}
-    {% capture critical %}
-      {% include critical/{{ page.pagestyle }} %}
-    {% endcapture %}
-  {% endif %}
 
-  <style>
-    {{ styles }}{{ critical }}{{ postsStyle}}
-  </style>
 </head>
+

@@ -21,6 +21,8 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string, hint: "The name of your site" }
           - {label: Domain, name: domainname, widget: string, hint: "The url of your site. Example: https://mysite.com" }
+          - {label: "Twitter Handle", name: twitter, widget: string, hint: "Your Twitter handle for Rich Cards" }
+          - {label: "Open Grpah", name: opengraph, widget: boolean, default: true, hint: "This is used for rich cards on Twitter and the like" }
           - {label: Webmentions, name: webmention, widget: boolean, default: false }
           - {label: Bootstrap, name: bootstrap, widget: boolean, default: false }
       - label: "Social Media"
