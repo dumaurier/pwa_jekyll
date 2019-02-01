@@ -1,6 +1,6 @@
-title: A PWA Powered by Jekyll and Served with Netlify
-domainname: 'pwa-jekyll-starter.netlify.com'
+title: 'Jekyll PWA '
+domainname: pwa-jekyll-starter.netlify.com
 twitter: jshvgt
-opengraph: false 
+opengraph: false
 webmention: true
-bootstrap: true
+bootstrap: false
