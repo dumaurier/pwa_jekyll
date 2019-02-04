@@ -17,7 +17,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Name", name: name, widget: string, hint: "The name of you PWA" }
           - {label: "Short Name", name: shortName, widget: string, hint: "The short name of your PWA. Usually displayed under the icon if installed to users home screen" }
           - {label: "Start URL", name: "startURL", widget: string, hint: "The URL which the user will start from when launching the PWA. Include a query string param if you want to track launches from PWA" }
-          - {label: "Display", name: "display", widget: select, option: ["standalone", "fullscreen", "minimal ui", "browser" ] },
           - {label: "Background Colour", name: "bgColour", widget: string, hint: "Loading colour of app when launching" },
           - {label: "Theme Colour", name: themeColour, widget: string, hint: "Defines the default theme color for an application." },
           - {label: "Scope", name: "scope", widget: string, hint: "Defines the navigation scope of this website's context." }
