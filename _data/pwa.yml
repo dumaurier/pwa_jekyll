@@ -1,10 +1,10 @@
 enablePWA: true
 name: Name
 shortName: "Short Name"
-icon16: icon-16x16.jpg
-icon32: icon-32x32.jpg
-icon192: icon-192x192.jpg
-icon512: icon-512x512.jpg
+icon16: "/static-assets/images/icon-16x16.png"
+icon32: "/static-assets/images/icon-32x32.png"
+icon192: "/static-assets/images/icon-192x192.png"
+icon512: "/static-assets/images/icon-512x512.png"
 startUrl: "/"
 display: standalone
 bgColour: "#007ac9"
