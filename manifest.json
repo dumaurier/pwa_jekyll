@@ -1,29 +1,33 @@
+---
+layout: null
+---
+{% assign pwa = site.data.pwa %}
 {
-  "name": "PWA+Jekyll",
-  "short_name": "PWA+Jekyll",
-  "description": "PWA + Jekyll",
+  "name": "{{ pwa.name }}",
+  "short_name": "{{ pwa.shortName }}",
+  "description": "{{ pwa.description }}",
   "icons": [{
-      "src": "/static-assets/images/icon-16x16.png",
+      "src": "{{ pwa.icon16 }}",
       "sizes": "16x16",
       "type": "image/png"
   },
   {
-      "src": "/static-assets/images/icon-32x32.png",
+      "src": "{{ pwa.icon32 }}",
       "sizes": "32x32",
       "type": "image/png"
   },
   {
-      "src": "/static-assets/images/icon-192x192.png",
+      "src": "{{ pwa.icon192 }}",
       "sizes": "192x192",
       "type": "image/png"
   },
   {
-      "src": "/static-assets/images/icon-192x192.png",
+      "src": "{{ pwa.icon512 }}",
       "sizes": "512x512",
       "type": "image/png"
   }],
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0073bd",
-  "theme_color": "#0073bd"
+  "start_url": "{{ pwa.startUrl }}",
+  "display": "{{ pwa.display }}",
+  "background_color": "{{ pwa.bgColour }}",
+  "theme_color": "{{ pwa.themeColour }}"
 }

@@ -1,6 +1,7 @@
 enablePWA: true
-name: Name
-shortName: "Short Name"
+name: "Jekyll PWA"
+shortName: "jPWA"
+description: "A Great PWA for you to enjoy."
 icon16: "/static-assets/images/icon-16x16.png"
 icon32: "/static-assets/images/icon-32x32.png"
 icon192: "/static-assets/images/icon-192x192.png"
@@ -8,5 +9,5 @@ icon512: "/static-assets/images/icon-512x512.png"
 startUrl: "/"
 display: standalone
 bgColour: "#007ac9"
-themeColour: "0073bd"
+themeColour: "#0073bd"
 scope: "/"

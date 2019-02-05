@@ -26,6 +26,8 @@
 <script  src="{{ site.baseurl }}static-assets/js/{{ page.pagejs }}"></script>
 {% endif %}
 
+
+{% if site.data.pwa.enablePWA == true %}
 <script>
 // Ye Olde Service Worker----------------------------------------------
 (function() {
@@ -39,3 +41,4 @@ if ('serviceWorker' in navigator) {
 }
 })();
 </script>
+{% endif %}

@@ -1,7 +1,8 @@
+
 {
-  "name": "PWA+Jekyll",
-  "short_name": "PWA+Jekyll",
-  "description": "PWA + Jekyll",
+  "name": "Jekyll PWA",
+  "short_name": "jPWA",
+  "description": "A Great PWA for you to enjoy.",
   "icons": [{
       "src": "/static-assets/images/icon-16x16.png",
       "sizes": "16x16",
@@ -18,12 +19,12 @@
       "type": "image/png"
   },
   {
-      "src": "/static-assets/images/icon-192x192.png",
+      "src": "/static-assets/images/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
   }],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0073bd",
+  "background_color": "#007ac9",
   "theme_color": "#0073bd"
 }

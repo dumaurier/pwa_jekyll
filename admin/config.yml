@@ -18,10 +18,13 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Short Name", name: shortName, widget: string, hint: "The short name of your PWA. Usually displayed under the icon if installed to users home screen" }
           - {label: "Start URL", name: "startUrl", widget: string, hint: "The URL which the user will start from when launching the PWA. Include a query string param if you want to track launches from PWA" }
           - {label: "Display", name: "display", widget: select, options: ["standalone", "fullscreen", "minimal ui", "browser" ] }
-          - {label: "Background Colour", name: "bgColour", widget: string, hint: "Loading colour of app when launching" }
-          - {label: "Theme Colour", name: themeColour, widget: string, hint: "Defines the default theme color for an application." }
+          - {label: "Background Colour", name: "bgColour", widget: string, hint: "Loading colour of app when launching. Include # in text field." }
+          - {label: "Theme Colour", name: themeColour, widget: string, hint: "Defines the default theme color for an application. Include # in text field." }
           - {label: "Scope", name: "scope", widget: string, hint: "Defines the navigation scope of this website's context." }
           - {label: "Icon 16x16", name: "icon16", widget: "image", default: "/static-assets/images/icon-16x16.png" }
+          - {label: "Icon 32x32", name: "icon32", widget: "image", default: "/static-assets/images/icon-32x32.png" }
+          - {label: "Icon 192x192", name: "icon192", widget: "image", default: "/static-assets/images/icon-192x192.png" }
+          - {label: "Icon 512x512", name: "icon512", widget: "image", default: "/static-assets/images/icon-512x512.png" }
       - label: "About"
         name: "about"
         file: "_data/about.yml"
