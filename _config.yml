@@ -3,7 +3,7 @@ title: Jekyll PWA Starter
 timezone: UTC
 destination: _site/
 domainname: https://pwa-jekyll-starter.netlify.com
-baseurl: /
+baseurl: ''
 sitename: My Website
 assetsurl: /static-assets/
 markdown: kramdown
