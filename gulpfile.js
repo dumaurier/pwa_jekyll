@@ -1,13 +1,13 @@
-const gulp        = require('gulp');
-const browserSync = require('browser-sync');
-const sass        = require('gulp-sass');
-const prefix      = require('gulp-autoprefixer');
-const cp          = require('child_process');
-const run         = require('gulp-run');
-const concat      = require('gulp-concat');
-const uglify      = require('gulp-uglify-es').default;
-const htmlmin     = require('gulp-htmlmin');
-const rev         = require('gulp-rev');
+const gulp        = import('gulp');
+const browserSync = import('browser-sync');
+const sass        = import('gulp-sass');
+const prefix      = import('gulp-autoprefixer');
+const cp          = import('child_process');
+const run         = import('gulp-run');
+const concat      = import('gulp-concat');
+const uglify      = import('gulp-uglify-es').default;
+const htmlmin     = import('gulp-htmlmin');
+const rev         = import('gulp-rev');
 
 const jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 const messages = {

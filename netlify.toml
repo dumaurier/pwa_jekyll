@@ -1,4 +1,4 @@
 [build]
-  command = "gulp netlify-build"
+  command = "jekyll build"
   publish = "_site/"
 
