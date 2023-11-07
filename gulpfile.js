@@ -181,3 +181,4 @@ gulp.task('default', ['scripts', 'page-scripts', 'critical', 'sass-fast', 'brows
  */
 gulp.task('bootstrapper', ['boot-css', 'boot-js', 'browser-sync', 'watch']);
 gulp.task('boot-build', ['boot-css', 'boot-js','scripts', 'page-scripts', 'critical', 'sass-fast', 'jekyll-build']);
+gulp.task('netlify-build', ['scripts', 'page-scripts', 'critical', 'sass-fast', 'jekyll-build']);
